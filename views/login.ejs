@@ -1,0 +1,70 @@
+<% PAGE = {} %>
+<% PAGE.Path = "login" %>
+<% PAGE.Title = "Вход" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["forms"] %>
+<% PAGE.NoJS = true %>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <form action="" method="post">
+                <label>Потребителско име:
+                    <input type="text" name="username">
+                </label>
+
+                <label>Парола:
+                    <input type="password" name="password">
+                </label>
+
+                <%if(typeof message != "undefined"){%>
+                    <script>
+                        swal({
+                            title: "<%=message%>",
+                            type: "error"
+                        });
+                    </script>
+                <%}%>
+
+                <%if(typeof AdminError != "undefined"){%>
+                    <script>
+                        swal({
+                            title: "<%=AdminError%>",
+                            type: "error"
+                        });
+                    </script>
+                <%}%>
+
+                <%if(typeof SessionError != "undefined"){%>
+                    <script>
+                        swal({
+                            title: "<%=SessionError%>",
+                            type: "error"
+                        });
+                    </script>
+                <%}%>
+
+
+
+
+                <input type="submit" value="Вход" class="w-100 mb-3">
+
+                <a href="/register" class="Link text-center">Регистрация</a>
+                <a href="/forgottenPassword" class="Link text-center">Забравена парола?</a>
+            </form>
+
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

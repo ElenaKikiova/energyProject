@@ -1,0 +1,85 @@
+<% PAGE = {} %>
+<% PAGE.Path = "recipe" %>
+<% PAGE.Title = "Рецепта за " + RecipeInfo.Blocks + " бл."%>
+<% PAGE.Description = "Рецепта за " + RecipeInfo.Blocks + " блока, балансирана по Зоната."%>
+<% PAGE.Keywords = "рецепта, балансирана, " + RecipeInfo.Blocks + " блока, " + RecipeInfo.ParsedIngredientsString %>
+<% PAGE.AdditionalCSS = ["recipe", "ingredientTile"] %>
+<% PAGE.AdditionalJS = ["calcHowManyBlocks"] %>
+<% PAGE.Angular = ["recipeApp"]%>
+<html>
+
+    <% include partials/head %>
+
+    <body ng-app="RecipeApp" ng-controller="RecipeController">
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <section>
+                <div id="RecipeId" class="d-none"><%=RecipeInfo._id%></div>
+                <h6 class="text-center"><%=RecipeInfo.Date%></h6>
+                <div class="d-flex flex-wrap justify-content-center mb-2">
+                    <h5 ng-init="RecipeBlocks = <%=RecipeInfo.Blocks%>">
+                        <b><%=RecipeInfo.Name%></b> - <input type="number" step="0.1" id="RecipeBlocks" ng-model="RecipeBlocks" ng-change="changeRecipeBlocks()" min="1"> бл.
+                    </h5>
+                    <%if(userId == RecipeInfo.UserId && isSharedRecipe != true){%>
+                    <div class="ml-2">
+                        <div class="fas fa-share-alt-square RecipeActions" id="ShareRecipe" title="Сподели рецепта"></div>
+                    </div>
+                    <%}%>
+                    <div class="ml-3">
+                        <div class="fas fa-trash-alt RecipeActions" id="DeleteRecipe" title="Изтрий рецепта"></div>
+                    </div>
+
+                </div>
+
+                <div id="UserDish">
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <h3>Продукти</h3>
+
+                        <div class="d-flex flex-wrap py-3" id="Ingredients" ng-init="InitialRecipeBlocks =  <%=RecipeInfo.Blocks%>">
+                        </div>
+
+                    </div>
+
+                    <!--
+
+                    <div class="col-md-6 col-sm-12">
+
+                        <h3>Стъпки за приготвяне</h3>
+
+                        <div class="d-flex flex-wrap py-3" id="PreparationSteps" >
+
+                            <%if(RecipeInfo.PreparationSteps != null){%>
+                                <%=RecipeInfo.PreparationSteps%>
+                            <%}else{%>
+                                За тази рецепта няма описани стъпки :)
+                            <%}%>
+                        </div>
+
+                    </div>
+
+                    -->
+
+                </div>
+
+                <div class="Notification">Възможна е неточност до 1-2 гр или 0,3 блока при изчисляване на много малки порции.</div>
+
+            </section>
+
+        </div>
+
+        <div id="RecipeInfo" class="d-none"><%=JSON.stringify(RecipeInfo)%></div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

@@ -1,0 +1,31 @@
+<% PAGE = {} %>
+<% PAGE.Path = "oups" %>
+<% PAGE.Title = "Опс" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = [] %>
+<% PAGE.NoJS = true%>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <div id="OupsContainer">
+
+            <div class="Logo mb-2">ENERGY</div>
+
+            <%if(typeof message != "undefined"){%>
+                <p>Този раздел е в процес развитие и скоро ще бъде достъпен за потребителите :)</p>
+                <a href="/" class="Link">Към главната</a>
+            <%}else{%>
+                <p>Страницата, която търсите, не съществува </p>
+                <a href="/" class="Link">Към главната</a>
+            <%}%>
+
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+<% PAGE = {} %>
+<% PAGE.Path = "register" %>
+<% PAGE.Title = "Регистрация" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["forms"] %>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <div id="Form">
+
+                <label>Потребителско име (4 - 15 символа, без интервали)
+                    <input type="text" id="username" required min="4" max="10">
+                </label>
+
+                <div id="UsernameNotification" class="Notification"></div>
+
+                <label>Email
+                    <input type="email" id="email" required>
+                </label>
+
+                <div id="EmailNotification" class="Notification"></div>
+
+                <div style="display: inline-block;" class="pr-1">Пол:</div>
+                    <label style="display: inline-block; width: auto"><input type="radio" name="gender" value="M" checked> Мъж</label>
+                    <label style="display: inline-block; width: auto"><input type="radio" name="gender" value="F"> Жена</label>
+
+                <label>Парола (6 - 20 символа, без интервали)
+                    <input type="password" id="password">
+                </label>
+
+                <label>Повтори парола
+                    <input type="password" id="passwordRepeat">
+                </label>
+
+                <div id="PasswordNotification" class="Notification"></div>
+
+                <button id="register" class="w-100 mb-3">Регистрация</button>
+
+                <a href="/login" class="Link text-center">Вход</a>
+
+            </div>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

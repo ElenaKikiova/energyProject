@@ -1,0 +1,49 @@
+<% PAGE = {} %>
+<% PAGE.Path = "admin/users" %>
+<% PAGE.AdminFolder = true %>
+<% PAGE.Title = "Администраторски панел" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["admin", "dataTable"] %>
+<% PAGE.AdditionalJS = ["calcIngredientType", "calcHowManyBlocks"] %>
+<% PAGE.useDataTables = true %>
+<html>
+
+    <% include ../partials/head %>
+
+    <body class="Loading">
+
+
+        <% include adminNav %>
+
+        <div id="Container">
+
+            <h1>ПОТРЕБИТЕЛИ</h1>
+
+            <section>
+                <h3> Обща информация </h3>
+
+                Брой потребители: <span id="UserCount"></span><br>
+                
+            </section>
+
+            <table id="UsersTable" class="w-100" border="1" bordercolor="white">
+                <thead data-role="Header">
+                   <th> Потр. име</th>
+                   <th> E-mail</th>
+                   <th> Статус </th>
+                   <th> Регистр.</th>
+                   <th> Посл. вход</th>
+                   <th> Бр. записи</th>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+        </div>
+
+        <% include ../partials/footer %>
+
+    </body>
+
+</html>

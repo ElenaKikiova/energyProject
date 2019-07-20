@@ -1,0 +1,43 @@
+@media screen and (max-width: 465px){
+    /* Index */
+    section#Home{
+        background-size: 180%;
+    }
+    #EnergyHeader{ height: 60% !important}
+    .Logo{ font-size: 2rem !important}
+    #Navigation>a {
+        width: 100%;
+        font-size: 1rem !important;
+        line-height: 1.2rem !important;
+    }
+    #SubText{ font-size: 1rem !important}
+
+    /* Profile */
+    .NavItemContainer{
+        min-width: 120px !important;
+    }
+    .NavItem{
+        width: 80px !important;
+        height: 120px !important;
+    }
+        .NITitle{ font-size: 0.9rem !important}
+        .NIDescription{ display: none !important}
+
+    .LIDetails[data-type="Blocks"]{display: none}
+}
+
+
+@media screen and (max-width: 768px){
+    /* Ingredients - hide ingredient info pane on the left */
+    #Info{ display: none}
+
+    /* Profile - remove padding of sections container */
+    #SectionContainer{ padding: 0px !important}
+    .NIIcon{ font-size: 1.8rem !important}
+}
+
+@media screen and (max-width: 992px){
+    /* Display page name */
+    h1 {display: block}
+}
+=

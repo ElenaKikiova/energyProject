@@ -1,0 +1,201 @@
+@import "colors.less";
+
+label{
+    margin: 0px !important
+}
+
+#ToTop{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: center;
+    color: @olivegreen;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+    cursor: pointer;
+}
+
+#NavigationPane{
+    width: 100%;
+    height: calc(100vh - 100px); // all without the navbar and footer
+}
+
+.NavItemContainer{
+    min-width: 200px;
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px @grey;
+    border: 1px solid @lightgrey;
+    text-align: center;
+    padding: 5px;
+}
+    .NIIcon{
+        font-size: 2.5rem;
+        height: 3rem;
+    }
+    .NIIcon.fa-calendar-alt{color: @green}
+    .NIIcon.fa-chart-line{color: @darkcyan}
+    .NIIcon.fa-carrot{color: @orange; font-size: 2.8rem}
+    .NIIcon.fa-utensils{color: @pink}
+    .NIIcon.fa-calculator{color: @olivegreen}
+    .NIIcon.fa-user-cog{color: @grey}
+
+    .NavItem{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        margin: auto;
+    }
+    .NavInfo{
+        margin: auto;
+    }
+    .NITitle{ font-size: 1.3rem; }
+    .NIDescription{
+        color: @grey;
+        height: 3rem;
+    }
+
+
+.PaddingDiv{
+    padding-top: 60px; // because of navbar
+}
+
+
+#addIngredientForm{
+    display: none;
+}
+
+
+// Progress
+
+.dataTables_filter, .dataTables_empty, .dataTables_info { display: none !important}
+#ProgressRecordsTable {background-color: white;}
+
+.Record{
+    border-radius: 5px;
+    line-height: 1.7rem;
+    height: 2.3rem;
+    background-color: white;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+.Record>td{
+    border-bottom: 1px dashed @lightgrey;
+}
+.RDate{
+    width: 100px;
+    font-weight: bold;
+}
+
+.RFatBodyMassPercentage, .RWeight { text-align: center;}
+.RNumber{ display: inline-block; width: 50px !important; text-align: right}
+.RTendency{ display: inline-block; padding-left: 0.5rem !important}
+
+.fa-arrow-circle-up {color: @pink}
+.fa-arrow-circle-down {color: @cyan}
+.fa-pause-circle {color: @grey}
+.fa-play-circle {color: transparent !important}
+
+
+// Today Meal Details
+
+#TodayBlocks{
+    border-bottom: 2px oslid @orange;
+}
+
+#TodayBlocksSpan{ font-weight: bold;}
+
+
+// Calendar
+
+div.zabuto_calendar .table tr.calendar-month-header td{ background-color: white !important;}
+th{ background-color: @beige !important;}
+td.event div.day{background-color: @lightgrey;}
+
+.day{
+    border-radius: 3px;
+    position: relative;
+    line-height: 1.3rem;
+    height: 2rem;
+}
+
+.today::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 8px solid @grey;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-radius: 3px;
+}
+
+.gradeColor{
+    margin-right: 3px !important;
+    width: 20px;
+    height: 20px;
+    border: 1px solid @lightgrey;
+    border-radius: 3px;
+}
+
+// Criteria
+.blocks-0 {background-color: hsl(0, 90%, 65%)}
+.blocks-8 {background-color: hsl(88, 90%, 65%)}
+.blocks-13 {background-color: hsl(145, 90%, 65%)}
+.blocks-13plus {background-color: @lightgrey}
+
+// Make blocks gradation
+@maxBlocks: 13;
+
+.blocksGrade(@index) when (@index <= @maxBlocks) {
+    .blocksGrade((@index + 1)); // decrement
+
+    td[title="Прием: ~ @{index} блока"] > div when(@index <= 7){
+        background-color: hsl(10, 90%, 65%) !important;
+    }
+
+    td[title="Прием: ~ @{index} блока"] > div when(@index > 7){
+        @color: hsl(@index * 11, 90%, 65%);
+        background-color: @color !important;
+    }
+
+    td[title="Прием: ~ @{index} блока"] > div when(@index = 13){
+        @color: hsl(150, 90%, 65%);
+        background-color: @color !important;
+    }
+
+}
+
+.blocksGrade(1);
+
+// User Ingredients
+
+#NoUserIngredients{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+// Calculator
+
+.CriteriaNumber{
+    display: inline-block;
+    color: @olivegreen;
+    font-weight: bold;
+    width: 1rem;
+}
+
+#Results{
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px dashed @orange;
+}

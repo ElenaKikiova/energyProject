@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5c3e0e0d3249af1bfc40af70"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(16), 
+    "Data" : "2"
+}
+{ 
+    "_id" : ObjectId("5c3e1d253249af1bfc40af8e"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(17), 
+    "Data" : "12"
+}
+{ 
+    "_id" : ObjectId("5c3e220d3249af1bfc40af8f"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(15), 
+    "Data" : "9"
+}

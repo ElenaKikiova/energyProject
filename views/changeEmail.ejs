@@ -1,0 +1,57 @@
+<% PAGE = {} %>
+<% PAGE.Path = "changeEmail" %>
+<% PAGE.Title = "Промяна на email" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["forms"] %>
+<% PAGE.NoJS = true %>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <form action="" method="post">
+
+                <label>Нов еmail
+                    <input type="email" name="Email" required>
+                </label>
+
+                <label>Подтвърдете парола
+                    <input type="password" name="Password" required>
+                </label>
+
+                <%if(typeof ChangeError != "undefined"){%>
+                    <script>
+                        swal({
+                            title: "<%=ChangeError%>",
+                            type: "error"
+                        });
+                    </script>
+                <%}%>
+
+                <%if(typeof Success != "undefined"){%>
+                    <script>
+                        swal({
+                            title: "Успешна промяна",
+                            type: "success",
+                            footer: "<a href='/login'>Вход</a>"
+                        });
+                    </script>
+                <%}%>
+
+                <input type="submit" value="Промени" class="w-100 mb-3">
+
+            </form>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

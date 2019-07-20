@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white d-flex">
+
+    <a href="home"><div class="NItem pl-2 d-flex">
+        <img src="/images/Logo.png" height="35" class="mr-2" style="margin-top: 2px">
+        <div class="Logo" style="padding-top: 2px">ENERGY</div>
+    </div></a>
+
+    <button class="navbar-toggler m-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent !important">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <a href="/ingredients" class="nav-item px-3" data-link="Ingredients">
+            ПРОДУКТИ
+        </a>
+        <a href="/admin/ingredients" class="nav-item px-3" data-link="Ingredients">
+            РЕДАКТИРАНЕ НА ПРОДУКТИ
+        </a>
+        <a href="/admin/users" class="nav-item px-3" data-link="Users">
+            ПОТРЕБИТЕЛИ
+        </a>
+        <a href="../logout" class="nav-item px-3 ml-auto" data-link="LogOut">ИЗХОД</a>
+    </div>
+
+    <!-- userCookie -->
+    <span class="d-none" id="userCookieValue">
+        <% if(typeof userId != "undefined"){%>
+            <%=userId%>
+        <% }%>
+        |
+        <% if(typeof username != "undefined"){%>
+            <%=username%>
+        <% }%>
+    </span>
+
+</nav>

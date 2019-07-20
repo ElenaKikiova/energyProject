@@ -1,0 +1,40 @@
+{ 
+    "_id" : ObjectId("5c3638809e13bb22841644e8"), 
+    "UserId" : ObjectId("5c23c2b03532c638204a4817"), 
+    "Name" : "Протеин1", 
+    "Type" : "P", 
+    "Value" : NumberInt(14), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c3639029e13bb22841644ea"), 
+    "UserId" : ObjectId("5c23c2b03532c638204a4817"), 
+    "Name" : "Без име :(", 
+    "Type" : "C", 
+    "Value" : NumberInt(48), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c376ff05d3a652498f9e26d"), 
+    "UserId" : ObjectId("5c23c2b03532c638204a4817"), 
+    "Name" : "Още нящо", 
+    "Type" : "F", 
+    "Value" : NumberInt(40), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c39d27ddf5e972de467de0d"), 
+    "UserId" : ObjectId("5c23c2b03532c638204a4817"), 
+    "Name" : "Гаден протеин!", 
+    "Type" : "P", 
+    "Value" : NumberInt(3), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c3b22087c3e98314866d29b"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Name" : "Продоктт", 
+    "Type" : "C", 
+    "Value" : NumberInt(55), 
+    "__v" : NumberInt(0)
+}

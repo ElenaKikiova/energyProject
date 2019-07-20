@@ -1,0 +1,53 @@
+ul {
+  list-style: none !important;
+  padding: 0px !important;
+}
+li > a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+li {
+  border: 1px dashed #ff8a3a;
+  border-radius: 5px;
+  line-height: 1.7rem;
+  height: 2.3rem;
+  background-color: white;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+.LIDetails,
+.LIDelete {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.LIDetails[data-type='Number'] {
+  width: 25px;
+  color: #51c3bb;
+  font-weight: bold;
+}
+.LIDetails[data-type='Time'] {
+  max-width: 40%;
+}
+.LIDetails[data-type='Date'] {
+  width: 85px;
+}
+.LIDetails[data-type='ArticleTitle'] {
+  font-weight: bold;
+  color: #425e2a;
+}
+.LIDetails[data-type='ArticleDescription'] {
+  color: #6c6c6c !important;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 1px solid #7c8650;
+}
+.LIDetails[data-type='RecipeName'] {
+  font-weight: bold;
+}
+.LIDelete {
+  color: #ff727a !important;
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -1,0 +1,44 @@
+<% PAGE = {} %>
+<% PAGE.Path = "blog" %>
+<% PAGE.Title = "Блог" %>
+<% PAGE.Description = "Блог за Зоната, FAQ и информация за хранителните вещества, полезни съвети и още" %>
+<% PAGE.Keywords = "блог, съвети, рецепти, въглехидрати, протеини, мазнини, блокове, глюкагон, как" %>
+<% PAGE.AdditionalCSS = ["list"] %>
+<% PAGE.AdditionalJS = ["calc1Block", "calcHowManyBlocks", "calcIngredientType", "userIngredients"] %>
+<% PAGE.NoJS = true;%>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <h1>БЛОГ</h1>
+
+            <div id="SectionContainer" class="container-fluid">
+
+                <section id="ArticleLinks">
+                    <ul>
+                    <% for(var i = 0; i < Articles.length; i++){%>
+                        <a href="article/<%=Articles[i]._id%>">
+                            <li class="d-flex">
+                                    <div class="LIDetails" data-type="ArticleTitle"><%=Articles[i].Title%></div>
+                                    <div class="LIDetails d-none d-md-block" data-type="ArticleDescription"><%=Articles[i].Description%></div>
+                            </li>
+                        </a>
+                    <%}%>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

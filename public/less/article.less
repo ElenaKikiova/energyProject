@@ -1,0 +1,62 @@
+@import 'colors.less';
+
+article{
+    background-color: white;
+    padding: 15px;
+    margin: 0px;
+}
+
+#ArticleHeader{
+    border-bottom: 2px dashed @orange;
+}
+
+h3{
+    font-size: 2rem !important;
+    margin: 0px;
+}
+
+#Description{
+    color: @grey;
+}
+
+#ArticleNavigation{
+    border-bottom: 2px dashed @orange;
+}
+    ul{
+        margin: 0px;
+        list-style: none;
+    }
+    li{
+        position: relative;
+    }
+    li:before{
+        content: "\25CF";
+        position: absolute;
+        font-family: Arial, Helvetica;
+        left: -15px;
+        color: @olivegreen;
+    }
+
+section{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+h4{
+    padding-top: 40px;
+}
+
+#ArticleText{
+    background-color: white;
+    text-overflow: clip;
+    word-wrap: normal;
+}
+
+    table{
+        flex-grow: 1;
+        padding: 5px;
+    }
+    th{
+        padding: 5px;
+        font-weight: bold;
+    }

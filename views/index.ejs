@@ -1,0 +1,117 @@
+<% PAGE = {} %>
+<% PAGE.Path = "index" %>
+<% PAGE.Title = "Главна страница" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["index"] %>
+<% PAGE.AdditionalJS = [] %>
+<% PAGE.NoJS = true;%>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="IndexContainer">
+
+            <section id="Home">
+
+                <div id="EnergyHeader" class="d-flex flex-column">
+
+                    <div id="Title" class="mt-3 pt-3 flex-grow-1">
+                        <div class="LogoImage mx-auto"></div>
+                        <div class="Logo Big">ENERGY</div>
+                    </div>
+
+                    <div id="SubText" class="p-1 flex-grow-1">Помощник за здравословно хранене по системата Зоната</div>
+
+                    <div id="Navigation" class="d-flex flex-wrap flex-justify-content-between pb-3 px-2">
+                        <a href="#About" class="Link flex-grow-1 p-1">За проекта</a>
+                        <a href="#WhyEnergy" class="Link flex-grow-1 p-1">Защо Energy?</a>
+                        <a href="#Functionality" class="Link flex-grow-1 p-1">Функции</a>
+                        <a href="/login" class="Link flex-grow-1 p-1">Вход</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="About" class=" p-3">
+
+                <h3>За проекта</h3>
+
+                <div class="d-flex align-items-center flex-wrap-reverse">
+                    <div class="text flex-grow-1" id="AboutText">
+                        <p>Energy е незаменим помощник за хората, решили да се хранят по системата за балансирано хранене, наречена Зоната. </p>
+                        <h5> Малко за Зоната </h5>
+                        <p>Целта на тази система е постигане на оптималната работа на всички системи в организъма, включително и мозъка. Как става това? Чрез осигуряване на баланс между нивата на инсулин и глюкагон, което се постига чрез уравновесяване на протеините, въглехидратите и мазнините в дневния прием.</p>
+                        <p>Уеб приложението е подходящо за всички, независимо от възрастта и целта, която искат да постигнат:</p>
+                            <ul>
+                                <li>хора, желаещи да отслабнат или поддържат тегло</li>
+                                <li>подрастващи, за да изработят навици за пълноценно хранене</li>
+                                <li>спортисти, желаещи да подобрят постиженията си</li>
+                            </ul>
+
+                    </div>
+
+                    <img src="/images/indexImages/1.png" class="image d-none d-md-block">
+                </div>
+
+            </section>
+
+            <section id="WhyEnergy">
+
+                <h3> Защо Energy?</h3>
+
+                <div class="d-flex align-items-center flex-wrap">
+
+                    <img src="/images/indexImages/2.png" class="image d-none d-md-block">
+
+                    <div class="text flex-grow-1" id="WhyEnergyText">
+                        <ul>
+                            <li><span class="Emphaisis">Без калкулатори</span> - уеб приложението извършва всички изчисления, нужни за балансиране на хранителните вещества по системата на Зоната, които преди се е налагало да се правят на ръка</li>
+                            <li><span class="Emphaisis">Където и да сте, за минимално време</span> – балансирането на ястие според Зоната отнема 2 минути и е възможно и чрез мобилно устройство.</li>
+                            <li><span class="Emphaisis">Обширна база данни от продукти</span> – потребителите разполагат с над 120 продукта, като всеки регистриран потребител може да добави свои</li>
+                            <li><span class="Emphaisis">Индивидуален подход</span> - всеки регистриран потребител може да добавя свои продукти и да съхранява балансирани блюда като свои рецепти. За всеки потребител се определя индивидуално количеството нужни хранителни вещества на ден – блокове. </li>
+                            <li><span class="Emphaisis">Проследяване на прогреса</span> - по нагледен начин се представя промяната в процента на телесните мазнини и теглото на потребителя, следенето на количеството приети блокове на ден</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="Functionality">
+
+                <h3> Функции</h3>
+
+                <div class="d-flex align-items-center flex-wrap">
+
+                    <div class="text flex-grow-1" id="WhyEnergyText">
+
+                        ENERGY не е само балансатор, но и помощник за следенето на успеха на потребителите, следващи системата на Зоната. Състои се от 4 модула:
+                        <ul>
+                        <li><a href="/ingredients" class="Link d-inline-block">Продукти</a>  - всички ингредиенти от базата данни на Energy и продуктите на потребителя са показани под формата на таблица с информация за всеки продукт</li>
+                        <li><a href="/pcfbalanced" class="Link d-inline-block">Балансатор</a> – с помощта на този модул потребителят може да балансира всяко ястие според протеини, въглехидрати и мазнини.
+                        След въвеждане на продуктите, Балансаторът ще извести при нарушен баланс в ястието и ще даде съвети за постигането му</li>
+                        <li><a href="/profile" class="Link d-inline-block">Профил</a>  – този модул е достъпен само за регистрирани потребители. В него е представена информацията за потребителя  - приетите блокове за всеки ден, прогресът му относно теглото и процентът телесни мазнини, неговите продукти и рецепти. Също така в Профил се променят паролата и email-ът.</li>
+                        <li><a href="/theory" class="Link d-inline-block">Теория</a>  – на разположение на потребителите са статии за видовете хранителни вещества, основни понятия в Зоната и как се прави правилния избор на продукти. Също така е включен и FAQ раздел, обясняващ действието на всеки модул в Energy</li>
+
+
+                    </div>
+
+                    <img src="/images/indexImages/3.png" class="image d-none d-md-block">
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

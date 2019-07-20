@@ -1,0 +1,48 @@
+{ 
+    "_id" : ObjectId("5c4edb0997359e36c490cd27"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "25.01.2019", 
+    "Weight" : 48.7, 
+    "FatBodyMassPercentage" : NumberInt(19), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c4edb0f97359e36c490cd28"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "27.01.2019", 
+    "Weight" : NumberInt(48), 
+    "FatBodyMassPercentage" : NumberInt(19), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c4edb1797359e36c490cd29"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "28.01.2019", 
+    "Weight" : 47.9, 
+    "FatBodyMassPercentage" : NumberInt(19), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c50114d69715506f8863532"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "29.01.2019", 
+    "Weight" : 48.2, 
+    "FatBodyMassPercentage" : NumberInt(19), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c50125469715506f8863533"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "29.01.2019", 
+    "Weight" : 48.3, 
+    "FatBodyMassPercentage" : NumberInt(20), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c50129c69715506f8863534"), 
+    "UserId" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Date" : "29.01.2019", 
+    "Weight" : 48.3, 
+    "FatBodyMassPercentage" : NumberInt(20), 
+    "__v" : NumberInt(0)
+}

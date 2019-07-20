@@ -1,0 +1,22 @@
+{
+  "name": "energy",
+  "version": "1.0.0",
+  "description": "Помощник за здравословно хранене",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Elena Kikiova",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "config": "^3.0.0",
+    "config-json": "^1.0.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.2",
+    "nodemailer": "^5.1.1"
+  }
+}

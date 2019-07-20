@@ -1,0 +1,11 @@
+.RecipeActions {
+  cursor: pointer;
+  line-height: 1.7rem;
+  font-size: 25px !important;
+}
+.fa-trash-alt {
+  color: #ff727a;
+}
+.fa-share-alt-square {
+  color: #a971e8;
+}

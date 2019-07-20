@@ -1,0 +1,68 @@
+<% PAGE = {} %>
+<% PAGE.Path = "admin/ingredients" %>
+<% PAGE.AdminFolder = true %>
+<% PAGE.Title = "Администраторски панел" %>
+<% PAGE.Description = "" %>
+<% PAGE.Keywords = "" %>
+<% PAGE.AdditionalCSS = ["ingredients", "dataTable"] %>
+<% PAGE.AdditionalJS = ["calcIngredientType", "calcHowManyBlocks"] %>
+<% PAGE.useDataTables = true %>
+<html>
+
+    <% include ../partials/head %>
+
+    <body class="Loading">
+
+        <% include adminNav %>
+
+        <div id="Container">
+
+            <h1>ПРОДУКТИ</h1>
+
+            <div>
+                <button type="button" class="PlusButton mx-auto fas fa-plus-circle" data-show-type="ingredientForm"></button>
+
+                <div id="addIngredientForm" class="SlideDown mb-2" data-show-type="ingredientForm">
+                    <label> Име на продукта:
+                        <input type="text" data-field="Name">
+                    </label>
+                    <div>
+                        <div class="Notification">Въведете хранителните стойности на продукта <b>за 100г.</b> Типът на продукта (протеин, въглехидрат или мазнина) ще бъде определен автоматично</div>
+
+                        <div>Протеини: <input type="number" min="0" max="100" data-field="contains" data-type="P"> г <br></div>
+                        <div>Въглехидрати: <input type="number" data-field="contains" data-type="C"> г <br></div>
+                        <div>Мазнини: <input type="number" data-field="contains" data-type="F"> г <br></div>
+                    </div>
+                    <div class="Notification">Въведете бележка към продукта (нестандартна мерна единица (бр. или бл.), ако е въглехидрат - гликемичен индекс в формат GI:<стойност>)</div>
+                    <label> Бележка:
+                        <input type="text" data-field="Note">
+                    </label>
+                    <div class="Notification">Въведете името на файла (трябва да съдържа цифри или латински букви) и качете съответното изображение в папка public/images/IngredientTiles. Разширение: PNG</div>
+                    <label> Изображение:
+                        <input type="text" data-field="ImageName" style="width: 100px" val="1">.png
+                    </label>
+                    <button class="SubmitIngredient w-100">Добави</button>
+                </div>
+            </div>
+
+            <table id="IngredientsTable" class="w-100">
+                <thead data-role="Header">
+                   <th> Тип</th>
+                   <th> Име</th>
+                   <th> В 100g</th>
+                   <th> м.е.</th>
+                   <th> Бележка</th>
+                   <th> Изображение</th>
+                   <th> Действия</th>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+        </div>
+
+        <% include ../partials/footer %>
+
+    </body>
+
+</html>

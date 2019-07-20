@@ -1,0 +1,56 @@
+<% PAGE = {} %>
+<% PAGE.Path = "sharedRecipes" %>
+<% PAGE.Title = "Рецепти" %>
+<% PAGE.Description = "Продуктите от базата данни на Energy, с информация за макронутриенти, гликемичен индекс и още. " %>
+<% PAGE.Keywords = "макронутриенти, въглехидрати, мазнини, протеини, гликемичен, индекс, подходящи, продукти, ингредиенти, храни" %>
+<% PAGE.AdditionalCSS = ["ingredients", "dataTable"] %>
+<% PAGE.AdditionalJS = ["calc1Block", "getIngredientInfoFromTable", "showIngredientInfo"] %>
+<% PAGE.useDataTables = true %>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <h1>РЕЦЕПТИ</h1>
+
+            <div class="container-fluid"><div class="row">
+
+                <div class="col-md-12">
+
+                    <a class="Link" href="/article/#addLink">Как се споделят рецепти?</a>
+
+                    <table id="RecipesTable" class="w-100">
+                        <thead data-role="Header">
+                            <th> Име</th>
+                            <th> Блокове</th>
+                            <th> Описание</th>
+                            <th> Харесано</th>
+                        </thead>
+
+                        <tbody>
+                            <%for(var i = 0; i < SharedRecipes.length; i++){%>
+                                <tr data-recipe-id='<%=SharedRecipes[i]._id%>'>
+                                    <td><%=SharedRecipes[i].Name%></td>
+                                    <td><%=SharedRecipes[i].Blocks%></td>
+                                    <td><%=SharedRecipes[i].Description%></td>
+                                    <td><%=SharedRecipes[i].Likes%></td>
+                                </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div></div>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

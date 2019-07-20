@@ -1,0 +1,99 @@
+<% PAGE = {} %>
+<% PAGE.Path = "editSharedRecipe" %>
+<% PAGE.Title = "Редактиране на споделена рецепта" %>
+<% PAGE.Description = "Продуктите от базата данни на Energy, с информация за макронутриенти, гликемичен индекс и още. " %>
+<% PAGE.Keywords = "макронутриенти, въглехидрати, мазнини, протеини, гликемичен, индекс, подходящи, продукти, ингредиенти, храни" %>
+<% PAGE.AdditionalCSS = ["ingredients", "ingredientTile"] %>
+<% PAGE.AdditionalJS = ["calc1Block", "getIngredientInfoFromTable", "showIngredientInfo"] %>
+<% PAGE.useDataTables = true %>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <h1>РЕДАКТИРАНЕ НА РЕЦЕПТА</h1>
+
+            <section>
+                <h3> Общи</h3>
+
+                <label> Име на рецептата: <input type="text" id="Name" value="<%=RecipeInfo.Name%>"></label>
+                <label> Блокове: <%=RecipeInfo.Blocks%></label>
+                <label> Описание: <input type="text" max="100" id="Description"></label>
+
+            </section>
+
+            <section>
+                <h3>Продукти </h3>
+
+                <div class="Notification">* Продукти, добавени от самия автор на рецептата. Имайте предвид, че данните за продукта може да не са точни</div>
+
+                <div class="d-flex flex-wrap">
+
+                    <%for(var i = 0; i < RecipeInfo.Ingredients.length; i++){%>
+
+                        <div class="ITile" data-ingredient-type="<%=RecipeInfo.Ingredients[i].IngredientId.Type%>">
+
+                            <div class="IImage" style="background-image: url(../images/ingredientTiles/<%=RecipeInfo.Ingredients[i].IngredientId.ImageName%>.png)"></div>
+                            <div class="IInfo d-flex w-100 t-center flex-wrap justify-content-between">
+                                <div class="px-1 flex-grow-1"> <%=RecipeInfo.Ingredients[i].Weight%> гр </div>
+                            </div>
+                            <div class="ITitle p-1"> <%=RecipeInfo.Ingredients[i].IngredientId.Name%> </div>
+                            <span class="IValue d-none"> <%=RecipeInfo.Ingredients[i].IngredientId.Value%> </span>
+                        </div>
+                    <%}%>
+
+                    <%for(var i = 0; i < RecipeInfo.UserIngredients.length; i++){%>
+
+                        <div class="ITile" data-ingredient-type="<%=RecipeInfo.UserIngredients[i].IngredientId.Type%>">
+
+                            <div class="IImage" style="background-image: url(../images/ingredientTiles/user<%=RecipeInfo.UserIngredients[i].IngredientId.Type%>.png)"></div>
+                            <div class="IInfo d-flex w-100 t-center flex-wrap justify-content-between">
+                                <div class="px-1 flex-grow-1"> <%=RecipeInfo.UserIngredients[i].Weight%> гр </div>
+                            </div>
+                            <div class="ITitle p-1"> <%=RecipeInfo.UserIngredients[i].IngredientId.Name%> *</div>
+                            <span class="IValue d-none"> <%=RecipeInfo.UserIngredients[i].IngredientId.Value%> </span>
+                        </div>
+                    <%}%>
+
+                    <%for(var i = 0; i < RecipeInfo.UserDish.length; i++){%>
+
+                        <div class="ITile">
+
+                            <div class="IImage" style="background-image: url(../images/ingredientTiles/userDish.png)"></div>
+                            <div class="IInfo d-flex w-100 t-center flex-wrap justify-content-between">
+                                <div class="px-1 flex-grow-1"> <%=RecipeInfo.UserDish[i].Weight%> гр </div>
+                            </div>
+                            <div class="ITitle p-1"> <%=RecipeInfo.UserDish[i].DishId.Name%> *</div>
+                            <span class="IValue d-none"> <%=RecipeInfo.UserDish[i].DishId.Value%> </span>
+                        </div>
+                    <%}%>
+                </div>
+            </section>
+
+            <section>
+                <h3>Стъпки за приготвяне </h3>
+
+                <div class="Notification">Опишете подробно стъпките за приготвяне (до 100 думи). Пишете на кирилица!</div>
+
+                <textarea id="PreparationSteps" maxlength="500" rows="4" cols="80" class="w-100">
+                    <%=RecipeInfo.PreparationSteps%>
+                </textarea>
+
+            </section>
+
+            <button id="saveSharedRecipeInfo" class="mt-2 w-100">Запази</button>
+
+        </div>
+
+        <div id="RecipeInfo" class="d-none"><%=JSON.stringify(RecipeInfo)%></div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

@@ -1,0 +1,70 @@
+@import "colors.less";
+
+.dataTables_length{display: none}
+
+.dataTables_filter{margin-top: 0.5rem; margin-bottom: 0.5rem;}
+.dataTables_filter>label{
+    display: flex;
+    align-items: center;
+}
+input[type="search"]{
+    margin-left: 5px;
+    flex-grow: 1;
+}
+
+
+.sorting, .sorting_asc, .sorting_desc { cursor: pointer;}
+
+.sorting:after, .sorting_asc:after, .sorting_desc:after {
+    width: 10px;
+    text-align: center;
+}
+
+.sorting_asc:after { content: '\25B4';}
+.sorting:after, .sorting_desc:after {  content: '\25BE';}
+
+tr{ cursor: pointer; }
+
+td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed white;
+}
+
+.paginate_button:hover{ color: black !important}
+
+.current{
+    border: 1px solid @green;
+    background: @green;
+    color: white;
+}
+
+.paginate_button {
+    display: inline-block;
+    width: 25px !important;
+    height: 25px !important;
+    text-align: center;
+    border: 1px solid @grey;
+    border-radius: 3px;
+    background-color: white;
+    margin: 2px;
+    color: black;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+.IngredientTypeBadge{
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.7rem;
+    font-size: 0.8rem !important;
+    color: white;
+    border-radius: 50%;
+    margin: auto;
+}
+.IngredientTypeBadge[title='Протеини']{background-color: @orange}
+.IngredientTypeBadge[title='Въглехидрати']{background-color: @green}
+.IngredientTypeBadge[title='Мазнини']{background-color: @pink}
+.IngredientTypeBadge[title='Балансирани']{background-color: @cyan}

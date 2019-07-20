@@ -1,0 +1,71 @@
+<% PAGE = {} %>
+<% PAGE.Path = "dishbalanced" %>
+<% PAGE.Title = "Балансатор" %>
+<% PAGE.Description = "Балансатор на блокове по Зоната с избор над 120 продукта. Отнема 2 минути!" %>
+<% PAGE.Keywords = "продукти, ингредиенти" %>
+<% PAGE.AdditionalCSS = ["workplace", "ingredientTile"] %>
+<% PAGE.AdditionalJS = ["calc1Block", "ingredientActions", "workplaceActions", "maintainBalance"] %>
+<% PAGE.Angular = ["balanceApp"]%>
+<% PAGE.useSelect2 = true %>
+<html>
+
+    <% include partials/head %>
+
+    <body ng-app="BalanceApp" ng-controller="BalanceController">
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <h1>БАЛАНСАТОР НА ПОЛУФАБРИКАТИ</h1>
+
+            <div id="Workplace" class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12 d-flex flex-wrap justify-content-center mb-2">
+                        <h5>Ястие за <input type="number" id="MealBlocks" value="3" step="0.1" style="width: 45px !important"> блока </h5>
+                        <div class="ml-3">
+                            <%if(userId != null){%>
+                                <div class="fas fa-plus-circle WorkplaceActions" id="AddToDiary" title="Добави ястие към дневния прием"></div>
+                                <div class="fas fa-save WorkplaceActions" id="SaveRecipe" title="Съхрани рецепта"></div>
+                            <%}%>
+                            <div class="fas fa-times-circle WorkplaceActions" id="ClearWorkplace" title="Изчисти"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-md-12 p-0">
+                        <div id="Notification" class="Notification"></div>
+                    </div>
+                </div>
+
+                <div class="row py-2 mb-2" id="DishContainer">
+                    <div class="col col-md-12 p-0 text-center">
+                        <div class="d-flex justify-content-center flex-wrap align-items-center">
+                            <h4 class="d-inline-block mx-2 my-0">ПОЛУФАБРИКАТ:</h4>
+                            <select class="DishSelect" style="width: 350px !important">
+                                <option></option>
+                            </select>
+
+                            <input type="number" id="DishWeight" value="0" step="10" style="width: 50px !important" class="mx-1" disabled> гр. =
+                            <input type="number" id="DishBlocks" value="0" step="0.1" style="width: 50px !important" class="mx-1" disabled> бл.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row" id="PaneContainer" style="display:none"></div>
+
+            </div>
+
+        </div>
+
+        <% include partials/footer %>
+
+
+
+
+    </body>
+
+</html>

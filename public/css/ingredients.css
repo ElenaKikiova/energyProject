@@ -1,0 +1,49 @@
+#Info {
+  background: white;
+  border: 1px solid #ff8a3a;
+  padding: 10px;
+}
+#SumIngredients,
+#PIngredients,
+#CIngredients,
+#FIngredients,
+#BIngredients {
+  font-family: 'Comfortaa';
+}
+#SumIngredients {
+  font-size: 1.5rem;
+}
+#PIngredients,
+#CIngredients,
+#FIngredients,
+#BIngredients {
+  font-size: 1.2rem;
+}
+#IImage {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#IOneBlock,
+#IValue,
+#IRecommendation {
+  padding: 5px;
+}
+#IOneBlock {
+  border: 1px solid #51c3bb;
+  background-color: #e1fffd;
+}
+#IRecommendation[data-type="good"] {
+  border: 1px solid #bed554;
+  background-color: #f0ffe2;
+}
+#IRecommendation[data-type="warning"] {
+  border: 1px solid #ffba68;
+  background-color: #ffffbd;
+}
+#IRecommendation[data-type="bad"] {
+  border: 1px solid #ff727a;
+  background-color: #ffcdcd;
+}

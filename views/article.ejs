@@ -1,0 +1,52 @@
+<% PAGE = {} %>
+<% PAGE.Path = "article" %>
+<% PAGE.Title = Article.Title %>
+<% PAGE.Description = "Статия на тема: " + Article.Description %>
+<% PAGE.Keywords = Article.Keywords + ", статия, информация" %>
+<% PAGE.AdditionalCSS = ["article"] %>
+<% PAGE.NoJS = true;%>
+<html>
+
+    <% include partials/head %>
+
+    <body>
+
+        <% include partials/nav %>
+
+        <div id="Container">
+
+            <article>
+                <div id="ArticleHeader" class="py-3">
+                    <h3><%=Article.Title%></h3>
+                    <div id="Description"><%=Article.Description%></div>
+                </div>
+
+                <div id="ArticleNavigation" class="py-3">
+                    Съдържание:
+                    <ul>
+                        <% for(var i = 0; i < Article.Topics.length; i++){%>
+                            <li><a href="#<%=Article.Topics[i].index%>" class="Link"><%=Article.Topics[i].title%></a></li>
+                        <%}%>
+                    </ul>
+                </div>
+
+                <div id="ArticleText">
+
+                    <% for(var i = 0; i < Article.Text.length; i++){%>
+                        <% var Topic = Article.Topics[Article.Text[i].index];%>
+                        <section>
+                            <h4 id="<%=Topic.index%>"><%=Topic.title%></h4>
+                            <div><%-Article.Text[i].text%></div>
+                        </section>
+                    <%}%>
+                </div>
+
+            </article>
+
+        </div>
+
+        <% include partials/footer %>
+
+    </body>
+
+</html>

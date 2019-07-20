@@ -1,0 +1,849 @@
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664e7"), 
+    "Name" : "Пшеница", 
+    "Type" : "C", 
+    "Value" : NumberInt(71), 
+    "Note" : "GI: 63"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664e8"), 
+    "Name" : "Пшен. грис", 
+    "Type" : "C", 
+    "Value" : 73.0, 
+    "Note" : "GI: 80"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664e9"), 
+    "Name" : "Пшен. брашно бяло", 
+    "Type" : "C", 
+    "Value" : 67.0, 
+    "Note" : "GI: 75"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ea"), 
+    "Name" : "Пшен. брашно пълнозърн.", 
+    "Type" : "C", 
+    "Value" : 67.0, 
+    "Note" : "GI: 45"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664eb"), 
+    "Name" : "Царевич. брашно", 
+    "Type" : "C", 
+    "Value" : NumberInt(70), 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ec"), 
+    "Name" : "Ориз", 
+    "Type" : "C", 
+    "Value" : 77.5, 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ed"), 
+    "Name" : "Ръж. брашно", 
+    "Type" : "C", 
+    "Value" : 73.0, 
+    "Note" : "GI: 45"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ee"), 
+    "Name" : "Фиде бяло бр.", 
+    "Type" : "C", 
+    "Value" : NumberInt(77), 
+    "Note" : "GI: 40"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ef"), 
+    "Name" : "Соево брашно", 
+    "Type" : "C", 
+    "Value" : NumberInt(27), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f0"), 
+    "Name" : "Овесени ядки", 
+    "Type" : "C", 
+    "Value" : 64.5, 
+    "Note" : "GI: 40"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f1"), 
+    "Name" : "Галета", 
+    "Type" : "C", 
+    "Value" : 73.5, 
+    "Note" : "GI: 74"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f2"), 
+    "Name" : "Бял хляб", 
+    "Type" : "C", 
+    "Value" : NumberInt(53), 
+    "Note" : "GI: 99"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f3"), 
+    "Name" : "Ръжен хляб", 
+    "Type" : "C", 
+    "Value" : NumberInt(53), 
+    "Note" : "GI: 65"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f4"), 
+    "Name" : "Картофи летни", 
+    "Type" : "C", 
+    "Value" : 18.0, 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f5"), 
+    "Name" : "Картофи зимни", 
+    "Type" : "C", 
+    "Value" : NumberInt(20), 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f6"), 
+    "Name" : "Цвекло", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 64"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f7"), 
+    "Name" : "Алабаш", 
+    "Type" : "C", 
+    "Value" : NumberInt(7), 
+    "Note" : "GI: 20"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f8"), 
+    "Name" : "Карфиол", 
+    "Type" : "C", 
+    "Value" : NumberInt(4), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664f9"), 
+    "Name" : "Зеле зимно", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664fa"), 
+    "Name" : "Зеле лятно", 
+    "Type" : "C", 
+    "Value" : NumberInt(15), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664fb"), 
+    "Name" : "Зеле червено", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 16"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664fc"), 
+    "Name" : "Зеле кисело", 
+    "Type" : "C", 
+    "Value" : NumberInt(4), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664fd"), 
+    "Name" : "Царевица млечна", 
+    "Type" : "C", 
+    "Value" : NumberInt(24), 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664fe"), 
+    "Name" : "Домати", 
+    "Type" : "C", 
+    "Value" : NumberInt(4), 
+    "Note" : "GI: 30"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b664ff"), 
+    "Name" : "Спанак", 
+    "Type" : "C", 
+    "Value" : 1.8, 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66500"), 
+    "Name" : "Магданоз листа", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 32"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66501"), 
+    "Name" : "Репички", 
+    "Type" : "C", 
+    "Value" : NumberInt(3), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66502"), 
+    "Name" : "Моркови", 
+    "Type" : "C", 
+    "Value" : NumberInt(8), 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66503"), 
+    "Name" : "Аспержи", 
+    "Type" : "C", 
+    "Value" : NumberInt(2), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66504"), 
+    "Name" : "Тиква", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 66"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66505"), 
+    "Name" : "Тиквички", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66506"), 
+    "Name" : "Краставици", 
+    "Type" : "C", 
+    "Value" : NumberInt(2), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66507"), 
+    "Name" : "Лук кромид", 
+    "Type" : "C", 
+    "Value" : 8.3, 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66508"), 
+    "Name" : "Фасул зелен", 
+    "Type" : "C", 
+    "Value" : NumberInt(4), 
+    "Note" : "GI: 22"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66509"), 
+    "Name" : "Грах зелен", 
+    "Type" : "C", 
+    "Value" : NumberInt(14), 
+    "Note" : "GI: 40"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650a"), 
+    "Name" : "Чушки зелени", 
+    "Type" : "C", 
+    "Value" : NumberInt(5), 
+    "Note" : "GI: 10"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650b"), 
+    "Name" : "Краставици кисели", 
+    "Type" : "C", 
+    "Value" : NumberInt(2), 
+    "Note" : "GI: 32"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650c"), 
+    "Name" : "Боб зрял", 
+    "Type" : "C", 
+    "Value" : NumberInt(54), 
+    "Note" : "GI: 35"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650d"), 
+    "Name" : "Грах зрял", 
+    "Type" : "C", 
+    "Value" : NumberInt(53), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650e"), 
+    "Name" : "Леща", 
+    "Type" : "C", 
+    "Value" : NumberInt(53), 
+    "Note" : "GI: 48"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6650f"), 
+    "Name" : "Ананас", 
+    "Type" : "C", 
+    "Value" : NumberInt(12), 
+    "Note" : "GI: 59"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66510"), 
+    "Name" : "Дюли", 
+    "Type" : "C", 
+    "Value" : NumberInt(9), 
+    "Note" : "GI: 35"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66511"), 
+    "Name" : "Ябълки", 
+    "Type" : "C", 
+    "Value" : NumberInt(7), 
+    "Note" : "GI: 36"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66512"), 
+    "Name" : "Банани", 
+    "Type" : "C", 
+    "Value" : NumberInt(24), 
+    "Note" : "GI: 52"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66513"), 
+    "Name" : "Лимони", 
+    "Type" : "C", 
+    "Value" : NumberInt(3), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66514"), 
+    "Name" : "Диня", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 76"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66515"), 
+    "Name" : "Череши", 
+    "Type" : "C", 
+    "Value" : NumberInt(14), 
+    "Note" : "GI: 63"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66516"), 
+    "Name" : "Грейпфрут", 
+    "Type" : "C", 
+    "Value" : NumberInt(7), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66517"), 
+    "Name" : "Кайсии", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 57"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66518"), 
+    "Name" : "Круши", 
+    "Type" : "C", 
+    "Value" : NumberInt(12), 
+    "Note" : "GI: 38"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66519"), 
+    "Name" : "Мандарини", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 45"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651a"), 
+    "Name" : "Малини", 
+    "Type" : "C", 
+    "Value" : NumberInt(8), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651b"), 
+    "Name" : "Вишни", 
+    "Type" : "C", 
+    "Value" : NumberInt(11), 
+    "Note" : "GI: 22"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651c"), 
+    "Name" : "Протокали", 
+    "Type" : "C", 
+    "Value" : NumberInt(9), 
+    "Note" : "GI: 42"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651d"), 
+    "Name" : "Праскови", 
+    "Type" : "C", 
+    "Value" : NumberInt(9), 
+    "Note" : "GI: 42"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651e"), 
+    "Name" : "Ягоди", 
+    "Type" : "C", 
+    "Value" : NumberInt(8), 
+    "Note" : "GI: 40"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6651f"), 
+    "Name" : "Къпини", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 25"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66520"), 
+    "Name" : "Сливи сини", 
+    "Type" : "C", 
+    "Value" : NumberInt(12), 
+    "Note" : "GI: 39", 
+    "ImageName" : NumberInt(18)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66521"), 
+    "Name" : "Грозде", 
+    "Type" : "C", 
+    "Value" : NumberInt(18), 
+    "Note" : "GI: 53", 
+    "ImageName" : NumberInt(28)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66522"), 
+    "Name" : "Сливи червени", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 22", 
+    "ImageName" : NumberInt(19)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66523"), 
+    "Name" : "Сливи бели", 
+    "Type" : "C", 
+    "Value" : NumberInt(12), 
+    "Note" : "GI: 22", 
+    "ImageName" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66524"), 
+    "Name" : "Фреш от грейпфрут", 
+    "Type" : "C", 
+    "Value" : NumberInt(10), 
+    "Note" : "GI: 48", 
+    "ImageName" : NumberInt(31)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66525"), 
+    "Name" : "Фреш от портокал", 
+    "Type" : "C", 
+    "Value" : NumberInt(11), 
+    "Note" : "GI: 40", 
+    "ImageName" : NumberInt(30)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66526"), 
+    "Name" : "Фреш от лимон", 
+    "Type" : "C", 
+    "Value" : NumberInt(8), 
+    "Note" : "GI: 25", 
+    "ImageName" : NumberInt(29)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66527"), 
+    "Name" : "Мед", 
+    "Type" : "C", 
+    "Value" : NumberInt(81), 
+    "Note" : "GI: 88", 
+    "ImageName" : NumberInt(32)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66528"), 
+    "Name" : "Какао прах.", 
+    "Type" : "C", 
+    "Value" : NumberInt(38), 
+    "Note" : "GI: 20", 
+    "ImageName" : NumberInt(33)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66529"), 
+    "Name" : "Шоколад млечен", 
+    "Type" : "C", 
+    "Value" : NumberInt(55), 
+    "Note" : "GI: 35", 
+    "ImageName" : NumberInt(35)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652a"), 
+    "Name" : "Захар", 
+    "Type" : "C", 
+    "Value" : NumberInt(100), 
+    "Note" : "GI: 100", 
+    "ImageName" : NumberInt(37)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652b"), 
+    "Name" : "Чушки черв. слад.", 
+    "Type" : "C", 
+    "Value" : NumberInt(6), 
+    "Note" : "GI: 10", 
+    "ImageName" : NumberInt(4)
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652c"), 
+    "Name" : "Пъпеш", 
+    "Type" : "C", 
+    "Value" : NumberInt(11), 
+    "Note" : "GI: 65"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652d"), 
+    "Name" : "Маруля", 
+    "Type" : "C", 
+    "Value" : NumberInt(3), 
+    "Note" : "GI: 50"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652e"), 
+    "Name" : "Ряпа Дайкон", 
+    "Type" : "C", 
+    "Value" : NumberInt(5), 
+    "Note" : "GI: 70"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b6652f"), 
+    "Name" : "Праз", 
+    "Type" : "C", 
+    "Value" : NumberInt(14), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66530"), 
+    "Name" : "Бамя", 
+    "Type" : "C", 
+    "Value" : 7.5, 
+    "Note" : "GI: 32"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66531"), 
+    "Name" : "Боровинки", 
+    "Type" : "C", 
+    "Value" : NumberInt(4), 
+    "Note" : "GI: 50"
+}
+{ 
+    "_id" : ObjectId("5c152c993249af1768b66532"), 
+    "Name" : "Броколи", 
+    "Type" : "C", 
+    "Value" : NumberInt(7), 
+    "Note" : "GI: 15"
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66573"), 
+    "Name" : "Агнешко", 
+    "Type" : "P", 
+    "Value" : NumberInt(22)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66574"), 
+    "Name" : "Пил. гърди", 
+    "Type" : "P", 
+    "Value" : NumberInt(24)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66575"), 
+    "Name" : "Пил.бутче месо", 
+    "Type" : "P", 
+    "Value" : NumberInt(19)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66576"), 
+    "Name" : "Заешко", 
+    "Type" : "P", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66577"), 
+    "Name" : "Овнешко", 
+    "Type" : "P", 
+    "Value" : NumberInt(17)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66578"), 
+    "Name" : "Патешко бяло", 
+    "Type" : "P", 
+    "Value" : NumberInt(22)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66579"), 
+    "Name" : "Говеждо", 
+    "Type" : "P", 
+    "Value" : NumberInt(21)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657a"), 
+    "Name" : "Пуешко", 
+    "Type" : "P", 
+    "Value" : NumberInt(22)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657b"), 
+    "Name" : "Свинско постно", 
+    "Type" : "P", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657c"), 
+    "Name" : "Телешко", 
+    "Type" : "P", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657d"), 
+    "Name" : "Пъстърва", 
+    "Type" : "P", 
+    "Value" : NumberInt(21)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657e"), 
+    "Name" : "Акула", 
+    "Type" : "P", 
+    "Value" : NumberInt(21)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b6657f"), 
+    "Name" : "Бяла риба", 
+    "Type" : "P", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66580"), 
+    "Name" : "Копърка", 
+    "Type" : "P", 
+    "Value" : NumberInt(16)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66581"), 
+    "Name" : "Шаран", 
+    "Type" : "P", 
+    "Value" : NumberInt(15)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66582"), 
+    "Name" : "Сьомга", 
+    "Type" : "P", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66583"), 
+    "Name" : "Скумрия", 
+    "Type" : "P", 
+    "Value" : NumberInt(19)
+}
+{ 
+    "_id" : ObjectId("5c152e2f3249af1768b66584"), 
+    "Name" : "Pиба тон", 
+    "Type" : "P", 
+    "Value" : NumberInt(22)
+}
+{ 
+    "_id" : ObjectId("5c1e7b1e3249af11588342c3"), 
+    "Name" : "Моцарела лайт", 
+    "Type" : "P", 
+    "Value" : 20.0
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f8f"), 
+    "Name" : "Мляко", 
+    "Type" : "B", 
+    "Value" : 0.5, 
+    "Note" : "бл."
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f90"), 
+    "Name" : "Кисело мляко (йогурт)", 
+    "Type" : "B", 
+    "Value" : 0.5, 
+    "Note" : "бл."
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f91"), 
+    "Name" : "Кисело мляко 3.6%", 
+    "Type" : "B", 
+    "Value" : 0.5, 
+    "Note" : "бл."
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f92"), 
+    "Name" : "Сметана 10%", 
+    "Type" : "F", 
+    "Value" : NumberInt(10)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f93"), 
+    "Name" : "Сметана 20%", 
+    "Type" : "F", 
+    "Value" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f94"), 
+    "Name" : "Сметана 30%", 
+    "Type" : "F", 
+    "Value" : NumberInt(30)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f95"), 
+    "Name" : "Масло 82%", 
+    "Type" : "F", 
+    "Value" : NumberInt(82)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f96"), 
+    "Name" : "Кашкавал Витоша", 
+    "Type" : "P", 
+    "Value" : NumberInt(24)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f97"), 
+    "Name" : "Сирене Чедър", 
+    "Type" : "P", 
+    "Value" : NumberInt(25)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f98"), 
+    "Name" : "Сирене Гауда", 
+    "Type" : "P", 
+    "Value" : NumberInt(25)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f99"), 
+    "Name" : "Сирене Ементал", 
+    "Type" : "P", 
+    "Value" : NumberInt(27)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9a"), 
+    "Name" : "Сирене синьо", 
+    "Type" : "P", 
+    "Value" : 21.5
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9b"), 
+    "Name" : "Сирене фета", 
+    "Type" : "P", 
+    "Value" : NumberInt(14)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9c"), 
+    "Name" : "Сирене пармезан", 
+    "Type" : "P", 
+    "Value" : NumberInt(35)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9d"), 
+    "Name" : "Сирене козе", 
+    "Type" : "P", 
+    "Value" : NumberInt(30)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9e"), 
+    "Name" : "Сирене краве", 
+    "Type" : "P", 
+    "Value" : NumberInt(15)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2f9f"), 
+    "Name" : "Извара Котидж", 
+    "Type" : "P", 
+    "Value" : NumberInt(11)
+}
+{ 
+    "_id" : ObjectId("5c28ae0a3249af41585a2fa0"), 
+    "Name" : "Извара кашкавалена", 
+    "Type" : "P", 
+    "Value" : NumberInt(18)
+}
+{ 
+    "_id" : ObjectId("5c28ae9f3249af41585a2fa8"), 
+    "Name" : "Яйце", 
+    "Type" : "P", 
+    "Value" : 1.0, 
+    "Note" : "бр."
+}
+{ 
+    "_id" : ObjectId("5c28aee43249af41585a2fb4"), 
+    "Name" : "Яйчен белтък", 
+    "Type" : "P", 
+    "Value" : 2.0, 
+    "Note" : "бр."
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e2f"), 
+    "Name" : "Печурки сурови", 
+    "Type" : "C", 
+    "Value" : NumberInt(6)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e30"), 
+    "Name" : "Манатарки сурови", 
+    "Type" : "C", 
+    "Value" : NumberInt(6)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e31"), 
+    "Name" : "Орехи", 
+    "Type" : "F", 
+    "Value" : NumberInt(57)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e32"), 
+    "Name" : "Фъстъци", 
+    "Type" : "F", 
+    "Value" : NumberInt(47)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e33"), 
+    "Name" : "Бадеми", 
+    "Type" : "F", 
+    "Value" : NumberInt(52)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e34"), 
+    "Name" : "Лешници", 
+    "Type" : "F", 
+    "Value" : NumberInt(62)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e35"), 
+    "Name" : "Семки тиквени", 
+    "Type" : "F", 
+    "Value" : 51.5
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e36"), 
+    "Name" : "Семки слънчогледови", 
+    "Type" : "F", 
+    "Value" : NumberInt(56)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e37"), 
+    "Name" : "Слънчогледово олио", 
+    "Type" : "F", 
+    "Value" : NumberInt(100)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e38"), 
+    "Name" : "Зехтин", 
+    "Type" : "F", 
+    "Value" : NumberInt(100)
+}
+{ 
+    "_id" : ObjectId("5c2f83fd3249af27f8d69e39"), 
+    "Name" : "Авокадо", 
+    "Type" : "F", 
+    "Value" : NumberInt(15)
+}

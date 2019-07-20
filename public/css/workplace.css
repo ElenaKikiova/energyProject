@@ -1,0 +1,67 @@
+#Notification,
+.BalanceTip,
+.DishBlocksNotification {
+  display: none;
+}
+#Notification[data-is-balanced='true'] {
+  background-color: #f0ffe2;
+  border: 1px dashed #bed554;
+}
+.DishBlocksNotification {
+  background-color: #e1fffd;
+  border: 1px dashed #02aec1;
+}
+#WorkplaceMenu {
+  margin-bottom: 1rem;
+}
+.WorkplaceActions {
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.WorkplaceActions.fa-plus-circle {
+  color: #93b300;
+}
+.WorkplaceActions.fa-save {
+  color: #ff8a3a;
+}
+.WorkplaceActions.fa-times-circle {
+  color: #ff727a;
+}
+.WorkplaceActions.fa-share-alt-square {
+  color: #51c3bb;
+}
+.disabledAction {
+  color: grey !important;
+  cursor: disabled;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #bed554;
+}
+.SlideDown > div > .select2-container {
+  width: 100% !important;
+}
+#AddIngredientForm {
+  padding: 10px;
+}
+.Pane {
+  padding: 5px !important;
+}
+.Pane[data-ingredient-type="P"] {
+  border-right: 1px dashed #ff8a3a;
+}
+.Pane[data-ingredient-type="C"] {
+  border-right: 1px dashed #ff8a3a;
+}
+.Note {
+  width: 100%;
+  padding: 1rem;
+  color: #444444 !important;
+  background-color: #fff8ef;
+}
+.IngredientsContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
+}

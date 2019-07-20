@@ -1,0 +1,28 @@
+{ 
+    "_id" : ObjectId("5c49a356c190c72c64da599b"), 
+    "Username" : "Admin", 
+    "Email" : "energyproject2019@gmail.com", 
+    "Gender" : "F", 
+    "BlocksPerDay" : 9.0, 
+    "Password" : "$2b$10$N6108mLavuPAlXJJOFOdsO.La.aGAE.quich3VQeusKGAw7.eu8W2", 
+    "Status" : "Administrator"
+}
+{ 
+    "_id" : ObjectId("5c4c2a27c458b83ae4a15472"), 
+    "Username" : "Test", 
+    "Gender" : "M", 
+    "BlocksPerDay" : 10.0, 
+    "Password" : "$2b$10$3KZukF6CXMnp.6IkYzmIAeG59ErN04uDPAQP906SpWvXwUM2lOL1e", 
+    "Email" : "qwqw@qw.qw", 
+    "Status" : null
+}
+{ 
+    "_id" : ObjectId("5c4dd056f327be3580c98ef6"), 
+    "Username" : "Inna", 
+    "Email" : "zabloga@mail.ru", 
+    "Password" : "$2b$10$ALZTKLwf5NObVpLdx8Ltse8tWD82BjzsEWz/S3Cuiv2GfpP0ExLKO", 
+    "Gender" : "F", 
+    "BlocksPerDay" : 7.1, 
+    "Status" : null, 
+    "__v" : NumberInt(0)
+}

@@ -1,0 +1,128 @@
+{ 
+    "_id" : ObjectId("5c40c20b3249af2aa863c16d"), 
+    "Title" : "Въглехидрати", 
+    "Description" : "Всичко за въглехидратите в Зоната", 
+    "Topics" : [
+        {
+            "index" : NumberInt(0), 
+            "title" : "Общо за протеините"
+        }, 
+        {
+            "index" : NumberInt(1), 
+            "title" : "Още"
+        }
+    ], 
+    "Text" : [
+        {
+            "index" : NumberInt(0), 
+            "text" : "ajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nskajfhvjhu htbb hhb rgbh nsk"
+        }, 
+        {
+            "index" : NumberInt(1), 
+            "text" : "gsershtk"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5c41edfd3249af0dd44d1681"), 
+    "Title" : "Протеини", 
+    "Keywords" : "протеини, видове, белтъци", 
+    "Description" : "Всичко за протеините", 
+    "Text" : [
+
+    ], 
+    "Topics" : ""
+}
+{ 
+    "_id" : ObjectId("5c5155a23249af2c7c55407f"), 
+    "Title" : "FAQ", 
+    "Pinned" : true, 
+    "Description" : "Често задавани въпроси", 
+    "Keywords" : "често, задавани, въпрос, отговор, как, модул, профил, дневник", 
+    "Topics" : [
+        {
+            "index" : NumberInt(0), 
+            "title" : "Защо да се регистрирам?"
+        }, 
+        {
+            "index" : NumberInt(1), 
+            "title" : "Какво прави Балансаторът?"
+        }, 
+        {
+            "index" : NumberInt(2), 
+            "title" : "Как добавям балансирано ястие към дневния си прием?"
+        }, 
+        {
+            "index" : NumberInt(3), 
+            "title" : "Каква е функцията на модул Продукти?"
+        }, 
+        {
+            "index" : NumberInt(4), 
+            "title" : "Какво е модул Дневник?"
+        }, 
+        {
+            "index" : NumberInt(5), 
+            "title" : "Какво е модул Профил?"
+        }
+    ], 
+    "Text" : [
+        {
+            "index" : NumberInt(0), 
+            "text" : "Нерегистриран потребител има достъп до модули Продукти и Балансатор, но няма възможност да следи своето хранене според Зоната. След регистрация, потребителят има достъп до модули Дневник и Профил. Може да записва ежедневния си прием в блокове и да следи своя прогрес в модул Дневник с нагледен календар. В модул Профил може да изчислява своя процент телесни мазнини, което е важен фактор за следене на успеха от системата. Също така има възможност да добавя свои продукти, които не е намерил в базата данни на Energy, и да ги ползва в модул Балансатор."
+        }, 
+        {
+            "index" : 1.0, 
+            "text" : "С помощта на модул Балансатор потребителят може да балансира всяко ястие според протеини, въглехидрати и мазнини. Разполагайки с над 120 продукта от базата данни на Energy, ползвателят въвежда ингредиентите, които ще използва  и теглото им, след което Балансаторът ще извести при нарушен баланс в ястието и ще даде съвети за постигането му. Регистрираните потребители могат да добавят свои продукти и да съхраняват балансирани блюда в дневния си прием в модул Дневник."
+        }, 
+        {
+            "index" : 2.0, 
+            "text" : "След като ястието е балансирано, кликнете върху копчето <div class='fas fa-save' style='color: #ff727a; font-size: 1.3rem'></div>. Количеството блокове на ястието и времето на съхранение ще бъдат записани и представени в модул Дневник."
+        }, 
+        {
+            "index" : 3.0, 
+            "text" : "Всички ингредиенти от базата данни на Energy и продуктите на потребителя са показани в модул Продукти под формата на таблица, която разполага с търсачка и сортиране. При кликване на името на продукт се показва информация за съдържанието на макронутриенти в него (протеини, въглехидрати и мазнини), категорията, към която спада според Зоната и гликемичния индекс. Също така за всеки продукт е категоризиран като слабо, средно и високо концентриран и има препоръка – дали е подходящ за диета с цел отслабване, дали спомага набиране на мускулна маса и тн."
+        }, 
+        {
+            "index" : 4.0, 
+            "text" : "Този модул е достъпен само за регистрирани потребители. В модул Дневник е представена информация за дневния прием на потребителя – времето и количеството приети блокове. В раздел Календар има достъп до дневните си приеми за текущия и миналите месеци, като всеки ден е означен с цветови код (обяснен в легендата под календара). Въведените от потребителя продукти са представени в раздел Моите продукти. Регистриран потребител има право да добавя свои продукти, да ги редактира и изтрива."
+        }, 
+        {
+            "index" : 5.0, 
+            "text" : "Модул профил е достъпен за регистрирани потребители. От него може да се променят паролата и email адреса, зададени при регистрация, а също така и да се изчислява процентът телесни мазнини. "
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5c5179143249af2c7c554080"), 
+    "Title" : "Процент телесни мазнини", 
+    "Description" : "Норми за процент телесни мазнини", 
+    "Keywords" : "процент, %, телесни, мазнини, тегло, фактор, как, изчисли, изчисляване, калкулиране, норма, измерване, lean, body, mass", 
+    "Topics" : [
+        {
+            "index" : NumberInt(0), 
+            "title" : "Какво означава процентът телесни мазнини?"
+        }, 
+        {
+            "index" : NumberInt(1), 
+            "title" : "Как да изчисля своя процент телесни мазнини?"
+        }, 
+        {
+            "index" : NumberInt(2), 
+            "title" : "Какъв процент на телесни мазнини трябва да имам?"
+        }
+    ], 
+    "Text" : [
+        {
+            "index" : NumberInt(0), 
+            "text" : "Тялото се нуждае от известно количество мазнини. Много е важно обаче това количество да влиза в нормата за даден организъм, която се изчислява на основата на ръста и отношението между размерите на китка-кръст за мъжете и теглото и мерките за ханша и корема за жените. "
+        }, 
+        {
+            "index" : 1.0, 
+            "text" : "След регистрация потребителят има достъп до модул Профил, където се намира <a href='/profile'>калкулатор за процент телесни мазнини</a>."
+        }, 
+        {
+            "index" : 2.0, 
+            "text" : "В зависимост от пола и физическата си активност, нормата за процент телесни мазнини се различава<br><div class='d-flex flex-wrap'><table class='mr-1'><tr><th colspan='2' class='text-center'>Мъже</th></tr><tr><td>Гимнастици</td><td>4</td><tr><td>Културисти</td><td>5</td><tr><td>Скибегачи на дълги разстояния</td><td>8</td><tr><td>Баскетболисти, футболисти</td><td>10</td><tr><td>Плувци</td><td>10</td><tr><td>Норма</td><td>15</td><tr><td>Тежкоатлети</td><td>17</td></table><table class='ml-1'><tr><th colspan='2' class='text-center'>Жени<th></tr><tr><td>Пациентки с анорексия</td><td>10</td><tr><td>Гимнастички</td><td>14</td><tr><td>Скибегачки на дълги разстояния</td><td>18</td><tr><td>Плувкини</td><td>19</td><tr><td>Баскетболистки, футболистки</td><td>21</td><tr><td>Норма</td><td>22</td></table></div>"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{ 
+    "_id" : ObjectId("5c3e0e0d3249af1bfc40af70"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(16), 
+    "Blocks" : "2", 
+    "Details" : [
+        {
+            "time" : "20:20", 
+            "blocks" : "2"
+        }, 
+        {
+            "time" : "20:22", 
+            "blocks" : "2.4"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5c3e1d253249af1bfc40af8e"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(17), 
+    "Blocks" : "12"
+}
+{ 
+    "_id" : ObjectId("5c3e220d3249af1bfc40af8f"), 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(15), 
+    "Blocks" : "9"
+}
+{ 
+    "_id" : ObjectId("5c476aad43c6980b745ec97d"), 
+    "Details" : [
+        {
+            "time" : "21:10", 
+            "blocks" : "1"
+        }, 
+        {
+            "time" : "21:20", 
+            "blocks" : NumberInt(3)
+        }
+    ], 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(22), 
+    "Blocks" : 4.3
+}
+{ 
+    "_id" : ObjectId("5c4888fce05026269c273a6b"), 
+    "Details" : [
+
+    ], 
+    "UserId" : ObjectId("5c3621e8e3d7e80ef4c4a921"), 
+    "Year" : NumberInt(2019), 
+    "Month" : NumberInt(1), 
+    "Day" : NumberInt(23), 
+    "Blocks" : NumberInt(0), 
+    "__v" : NumberInt(0)
+}

@@ -1,0 +1,236 @@
+label {
+  margin: 0px !important;
+}
+#ToTop {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #7c8650;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: white;
+  display: none;
+  cursor: pointer;
+}
+#NavigationPane {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+.NavItemContainer {
+  min-width: 200px;
+  width: 30%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 0px #6c6c6c;
+  border: 1px solid #cacaca;
+  text-align: center;
+  padding: 5px;
+}
+.NIIcon {
+  font-size: 2.5rem;
+  height: 3rem;
+}
+.NIIcon.fa-calendar-alt {
+  color: #bed554;
+}
+.NIIcon.fa-chart-line {
+  color: #02aec1;
+}
+.NIIcon.fa-carrot {
+  color: #ff8a3a;
+  font-size: 2.8rem;
+}
+.NIIcon.fa-utensils {
+  color: #ff727a;
+}
+.NIIcon.fa-calculator {
+  color: #7c8650;
+}
+.NIIcon.fa-user-cog {
+  color: #6c6c6c;
+}
+.NavItem {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  margin: auto;
+}
+.NavInfo {
+  margin: auto;
+}
+.NITitle {
+  font-size: 1.3rem;
+}
+.NIDescription {
+  color: #6c6c6c;
+  height: 3rem;
+}
+.PaddingDiv {
+  padding-top: 60px;
+}
+#addIngredientForm {
+  display: none;
+}
+.dataTables_filter,
+.dataTables_empty,
+.dataTables_info {
+  display: none !important;
+}
+#ProgressRecordsTable {
+  background-color: white;
+}
+.Record {
+  border-radius: 5px;
+  line-height: 1.7rem;
+  height: 2.3rem;
+  background-color: white;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+.Record > td {
+  border-bottom: 1px dashed #cacaca;
+}
+.RDate {
+  width: 100px;
+  font-weight: bold;
+}
+.RFatBodyMassPercentage,
+.RWeight {
+  text-align: center;
+}
+.RNumber {
+  display: inline-block;
+  width: 50px !important;
+  text-align: right;
+}
+.RTendency {
+  display: inline-block;
+  padding-left: 0.5rem !important;
+}
+.fa-arrow-circle-up {
+  color: #ff727a;
+}
+.fa-arrow-circle-down {
+  color: #51c3bb;
+}
+.fa-pause-circle {
+  color: #6c6c6c;
+}
+.fa-play-circle {
+  color: transparent !important;
+}
+#TodayBlocks {
+  border-bottom: 2px oslid #ff8a3a;
+}
+#TodayBlocksSpan {
+  font-weight: bold;
+}
+div.zabuto_calendar .table tr.calendar-month-header td {
+  background-color: white !important;
+}
+th {
+  background-color: #fff8ef !important;
+}
+td.event div.day {
+  background-color: #cacaca;
+}
+.day {
+  border-radius: 3px;
+  position: relative;
+  line-height: 1.3rem;
+  height: 2rem;
+}
+.today::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border: 8px solid #6c6c6c;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-radius: 3px;
+}
+.gradeColor {
+  margin-right: 3px !important;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+}
+.blocks-0 {
+  background-color: hsl(0, 90%, 65%);
+}
+.blocks-8 {
+  background-color: hsl(88, 90%, 65%);
+}
+.blocks-13 {
+  background-color: hsl(145, 90%, 65%);
+}
+.blocks-13plus {
+  background-color: #cacaca;
+}
+td[title="Прием: ~ 13 блока"] > div {
+  background-color: hsl(143, 90%, 65%) !important;
+}
+td[title="Прием: ~ 13 блока"] > div {
+  background-color: hsl(150, 90%, 65%) !important;
+}
+td[title="Прием: ~ 12 блока"] > div {
+  background-color: hsl(132, 90%, 65%) !important;
+}
+td[title="Прием: ~ 11 блока"] > div {
+  background-color: hsl(121, 90%, 65%) !important;
+}
+td[title="Прием: ~ 10 блока"] > div {
+  background-color: hsl(110, 90%, 65%) !important;
+}
+td[title="Прием: ~ 9 блока"] > div {
+  background-color: hsl(99, 90%, 65%) !important;
+}
+td[title="Прием: ~ 8 блока"] > div {
+  background-color: hsl(88, 90%, 65%) !important;
+}
+td[title="Прием: ~ 7 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 6 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 5 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 4 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 3 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 2 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+td[title="Прием: ~ 1 блока"] > div {
+  background-color: hsl(10, 90%, 65%) !important;
+}
+#NoUserIngredients {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.CriteriaNumber {
+  display: inline-block;
+  color: #7c8650;
+  font-weight: bold;
+  width: 1rem;
+}
+#Results {
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px dashed #ff8a3a;
+}

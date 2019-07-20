@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white d-flex">
+
+    <a href="/" style="color: transparent"><div class="NItem pl-2 d-flex">
+        <img src="/images/Logo.png" height="35" class="mr-2" style="margin-top: 2px">
+        <div class="Logo" style="padding-top: 2px">ENERGY</div>
+    </div></a>
+
+    <button class="navbar-toggler m-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent !important">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+        <a href="/blog" class="nav-item px-3" data-link="Blog"
+        <% if(PAGE.Path == "theory") {%> id="ActiveItem" <%}%>>
+            БЛОГ
+        </a>
+        <a href="/ingredients" class="nav-item px-3" data-link="Ingredients"
+        <% if(PAGE.Path == "ingredients") {%> id="ActiveItem" <%}%>>
+            ПРОДУКТИ
+        </a>
+        <a href="/pcfbalanced" class="nav-item px-3" data-link="Balansator"
+        <% if(PAGE.Path == "pcfbalanced") {%> id="ActiveItem" <%}%>>
+            БАЛАНСАТОР
+        </a>
+        <a href="/sharedRecipes" class="nav-item px-3" data-link="Recipes"
+        <% if(PAGE.Path == "recipes") {%> id="ActiveItem" <%}%>>
+            РЕЦЕПТИ
+        </a>
+
+        <% if(typeof userId != "undefined"){%>
+            <a href="/profile" class="nav-item px-3" data-link="Profile"
+            <% if(PAGE.Path == "profile") {%> id="ActiveItem" <%}%>>
+                ПРОФИЛ
+            </a>
+            <a href="/logout" class="nav-item px-3 ml-auto" data-link="LogOut">ИЗХОД</a>
+        <%}else{%>
+            <a href="/login" class="nav-item px-3 ml-auto" data-link="LogIn">ВХОД</a>
+        <%}%>
+    </div>
+
+    <!-- userCookie -->
+    <span class="d-none" id="userCookieValue">
+        <% if(typeof userId != "undefined"){%>
+            <%=userId%>
+        <% }%>
+    </span>
+
+</nav>

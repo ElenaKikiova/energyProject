@@ -1,0 +1,58 @@
+@import "colors.less";
+
+#Notification, .BalanceTip, .DishBlocksNotification{ display: none}
+#Notification[data-is-balanced='true'] { background-color: @lightgreen; border: 1px dashed @green;}
+.DishBlocksNotification { background-color: @lightcyan; border: 1px dashed @darkcyan}
+
+#WorkplaceMenu{
+    margin-bottom: 1rem;
+}
+
+.WorkplaceActions{
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.WorkplaceActions.fa-plus-circle { color: @darkgreen}
+.WorkplaceActions.fa-save{ color: @orange}
+.WorkplaceActions.fa-times-circle{ color: @pink}
+.WorkplaceActions.fa-share-alt-square { color: @cyan}
+
+.disabledAction{
+    color: grey !important;
+    cursor: disabled;
+}
+
+// Select2
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: @green;
+}
+
+.SlideDown>div>.select2-container{
+    width: 100% !important;
+}
+
+#AddIngredientForm{
+    padding: 10px;
+}
+
+.Pane{
+    padding: 5px !important;
+}
+
+    .Pane[data-ingredient-type="P"]{ border-right: 1px dashed @orange}
+    .Pane[data-ingredient-type="C"]{ border-right: 1px dashed @orange}
+
+    .Note{
+        width: 100%;
+        padding: 1rem;
+        color: #444444 !important;
+        background-color: @beige;
+    }
+
+    .IngredientsContainer{
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+    }
