@@ -34,5 +34,4 @@ $("input[data-field='contains']").on("keyup, change", function(){
     var input = $(this);
     var inputValue = parseInt(input.val());
     if(inputValue < 0) input.val(0);
-    else if(inputValue > 100) input.val(100);
 });
