@@ -34,7 +34,7 @@ for(var i = 0; i < IngredientTypes.length; i++){
             '</select>' +
             '<input ng-model="IValue[' + i + ']" class="IValue d-none" data-ingredient-type="' + IngredientTypes[i] + '">' +
             '<div class="w-100" id="Inputs">' +
-                '<input type="number" step="1" class="WeightInput" data-ingredient-type="' + IngredientTypes[i] + '" min="0" max="1000" ng-model="IWeight[' + i + ']" ng-change="changeWeight(' + i + ')" ng-keyup="changeWeight(' + i + ')"> гр. = ' +
+                '<input type="number" step="1" class="WeightInput" data-ingredient-type="' + IngredientTypes[i] + '" min="0" ng-model="IWeight[' + i + ']" ng-change="changeWeight(' + i + ')" ng-keyup="changeWeight(' + i + ')"> гр. = ' +
                 '<input type="number" step="0.1" class="BlocksInput" data-ingredient-type="' + IngredientTypes[i] + '" min="0" ng-model="IBlocks[' + i + ']" ng-change="changeBlocks(' + i + ')" ng-keyup="changeBlocks(' + i + ')"> бл.' +
             '</div>' +
         '</div>' +
