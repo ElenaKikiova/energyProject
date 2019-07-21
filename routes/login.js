@@ -47,9 +47,7 @@ app.post('/login', function (req, res){
                             res.cookie('EnergyUsername', user.Username, {maxAge: 14*24*hour}); // 2 weeks
                             res.cookie('EnergyUserId', user._id, {maxAge: 14*24*hour}); // 2 weeks
                         }
-                        //
-                        // user.LastEntry = new Date();
-                        // user.save();
+                        
 
                         user.set("LastEntry", new Date());
 

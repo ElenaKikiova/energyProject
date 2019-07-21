@@ -68,7 +68,7 @@ function addIngredientsToTable(ingredientsArray, Table, areUserIngredients){
 
         // Get first letter of ingredient type in BG
         var TypeInBG = IngredientTypesInBG[Ingredient.Type];
-        var TypeInBGChar =TypeInBG.slice(0, 1);
+        var TypeInBGChar = TypeInBG.slice(0, 1);
         var GI = ""; // Glycemic index
         if(Ingredient.Type == "C" && Ingredient.Note != null) {
             GI = "<span class='d-none' data-field='GI'>" + parseFloat(Ingredient.Note.split("GI:")[1]) + "</span>";
