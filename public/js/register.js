@@ -1,21 +1,29 @@
 var invalidFields = {};
 invalidFields["Username"] = invalidFields["Password"] = invalidFields["Email"] = 0;
 
+var english = /^[A-Za-z0-9]*$/;
+
 $("#username").on("change, keyup", function(){
     var Username = $(this);
     var UsernameNotification = $("#UsernameNotification");
 
-    if(Username.val().length < 4 || Username.val().length > 15){
+    function errorInUsername(){
         Username.addClass("InvalidInput");
-        UsernameNotification.html("Потребителското име трябва да е 4 - 15 символа");
         UsernameNotification.slideDown();
         invalidFields["Username"] = 1;
     }
+
+    if(Username.val().length < 4 || Username.val().length > 15){
+        errorInUsername();
+        UsernameNotification.html("Потребителското име трябва да е 4 - 15 символа");
+    }
+    else if(english.test(Username.val()) == false){
+        errorInUsername();
+        UsernameNotification.html("Потребителското име трябва да е на латиница");
+    }
     else if(Username.val().indexOf(" ") != -1){
-        Username.addClass("InvalidInput");
+        errorInUsername();
         UsernameNotification.html("Потребителското име не трябва да съдържа интервали");
-        UsernameNotification.slideDown();
-        invalidFields["Username"] = 1;
     }
     else{
         Username.removeClass("InvalidInput");
@@ -29,27 +37,30 @@ $("input[type='password']").on("change, keyup", function(){
     var PasswordRepeat = $("#passwordRepeat");
     var PasswordNotification = $("#PasswordNotification");
 
-    if( Password.val() != 0 && PasswordRepeat.val() != 0 &&
-        Password.val() != PasswordRepeat.val()){
+    function errorInPassword(){
         $(Password).addClass("InvalidInput");
         $(PasswordRepeat).addClass("InvalidInput");
-        PasswordNotification.html("Паролите не съвпадат");
         PasswordNotification.slideDown();
         invalidFields["Password"] = 1;
+    }
+
+    if( Password.val() != 0 && PasswordRepeat.val() != 0 &&
+        Password.val() != PasswordRepeat.val()
+    ){
+        errorInPassword();
+        PasswordNotification.html("Паролите не съвпадат");
     }
     else if(Password.val().length < 6 || Password.val().length > 20){
-        $(Password).addClass("InvalidInput");
-        $(PasswordRepeat).addClass("InvalidInput");
+        errorInPassword();
         PasswordNotification.html("Паролата трябва да е 6 - 20 символа");
-        PasswordNotification.slideDown();
-        invalidFields["Password"] = 1;
+    }
+    else if(english.test(Password.val()) == false){
+        errorInPassword();
+        PasswordNotification.html("Паролата трябва да е на латиница");
     }
     else if(Password.val().indexOf(" ") != -1){
-        $(Password).addClass("InvalidInput");
-        $(PasswordRepeat).addClass("InvalidInput");
+        errorInPassword();
         PasswordNotification.html("Паролата не трябва да съдържа интервали");
-        PasswordNotification.slideDown();
-        invalidFields["Password"] = 1;
     }
     else{
         $(Password).removeClass("InvalidInput");
