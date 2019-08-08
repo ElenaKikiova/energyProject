@@ -6,7 +6,7 @@
 loadUserTodayMeals();
 loadUserBlocksCalendar(false);
 //ProgressSection
-loadUserProgressTable(false);
+loadUserProgressChart(false);
 // MyIngredientsSection
 loadUserIngredients();
 // MyDishesSection
