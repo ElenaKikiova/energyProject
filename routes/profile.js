@@ -73,16 +73,19 @@ app.get('/getUserProgress', function(req, res){
     var idCookie = getUserCookie("id", req);
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserProgress.find({UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Progress){
+        UserProgress.find({UserId: idCookie}).sort({ date: 'desc' }).exec(function(err, Progress){
             if(err) throw err;
 
-
+            if(Progress.length > 50){
+                for(var i = 0; i < Progress.length - 50; i++){
+                    Progress[i].remove();
+                }
+            }
 
             UserCalendar.find({ UserId: idCookie}).sort({ date: 'desc' }).exec(function(err, Blocks){
                 if (err) throw err;
 
                 if(Blocks.length > 30){
-                    var Bl = Blocks;
                     for(var i = 0; i < Blocks.length - 30; i++){
                         Blocks[i].remove();
                     }
@@ -98,7 +101,8 @@ app.get('/getUserProgress', function(req, res){
 app.get('/getTodayMeals', function(req, res){
     var idCookie = getUserCookie("id", req);
     var date = new Date();
-    var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " 09 2019).+");
+    var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " " + manageDates.getDay(date) + " " + date.getFullYear() + ").+");
+    console.log(regex);
 
     // Delete all other day's details
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {

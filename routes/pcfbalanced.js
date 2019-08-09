@@ -13,6 +13,10 @@ var Recipes = require('../schemas/recipeSchema');
 var Recipe = Recipes.Recipe;
 var SharedRecipe = Recipes.SharedRecipe;
 
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
 // ROUTES
 
 var Ingredient = require('../schemas/ingredientSchema');
@@ -46,9 +50,10 @@ app.post('/addMealToDiary', function(req, res){
     var idCookie = getUserCookie("id", req);
 
     var date = new Date();
+    var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " " + manageDates.getDay(date) + " " + date.getFullYear() + ").+");
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserCalendar.findOne({ UserId: idCookie, Date: date}, function(err, todayRecord){
+        UserCalendar.findOne({ UserId: idCookie, Date: {$regex: regex}}, function(err, todayRecord){
             if(err) throw err;
 
             console.log(todayRecord);
