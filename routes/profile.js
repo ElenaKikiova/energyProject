@@ -73,7 +73,7 @@ app.get('/getUserProgress', function(req, res){
     var idCookie = getUserCookie("id", req);
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserProgress.find({UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Progress){
+        UserProgress.find({UserId: idCookie}).sort(date: 'descending').exec(function(err, Progress){
             if(err) throw err;
 
             if(Progress.length > 50){
@@ -82,7 +82,7 @@ app.get('/getUserProgress', function(req, res){
                 }
             }
 
-            UserCalendar.find({ UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Blocks){
+            UserCalendar.find({ UserId: idCookie}).sort({date: 'descending'}).exec(function(err, Blocks){
                 if (err) throw err;
 
                 if(Blocks.length > 30){
