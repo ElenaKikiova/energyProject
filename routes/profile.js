@@ -19,6 +19,10 @@ var Recipes = require('../schemas/recipeSchema');
 var Recipe = Recipes.Recipe;
 var SharedRecipe = Recipes.SharedRecipe;
 
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
 app.get('/profile', function(req, res){
     var usernameCookie = getUserCookie("username", req, res);
     var idCookie = getUserCookie("id", req, res);
@@ -74,7 +78,7 @@ app.get('/getUserProgress', function(req, res){
 
 
 
-            UserCalendar.find({ UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Blocks){
+            UserCalendar.find({ UserId: idCookie}).sort({ date: 'desc' }).exec(function(err, Blocks){
                 if (err) throw err;
 
                 if(Blocks.length > 30){
@@ -82,20 +86,6 @@ app.get('/getUserProgress', function(req, res){
                     for(var i = 0; i < Blocks.length - 30; i++){
                         Blocks[i].remove();
                     }
-                }
-
-                for(var i = 0; i < Blocks.length; i++){
-                    var date = Blocks[i].Year + ".0" + Blocks[i].Month + ".";
-                    if(Blocks[i].Day < 10) date += "0";
-                    date += Blocks[i].Day;
-                    var newD = new Date(date);
-                    console.log(date, newD);
-                    //
-                    Blocks[i].Day = undefined;
-                    Blocks[i].Month = undefined;
-                    Blocks[i].Year = undefined;
-                    Blocks[i].Date = newD;
-                    Blocks[i].save();
                 }
 
                 res.json({Progress: Progress, Blocks: Blocks});
@@ -108,20 +98,18 @@ app.get('/getUserProgress', function(req, res){
 app.get('/getTodayMeals', function(req, res){
     var idCookie = getUserCookie("id", req);
     var date = new Date();
-    var day = manageDates.getDay(date);
-    var month = manageDates.getMonth(date);
-    var year = date.getFullYear();
+    var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " 09 2019).+");
 
     // Delete all other day's details
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserCalendar.updateMany({Details: { $ne: null }, Day: { $ne: day }}, { $unset: { Details: ""}}, function(err){
+        UserCalendar.updateMany({Details: { $ne: null }, Date: { $ne: date }}, { $unset: { Details: ""}}, function(err){
             if (err) throw err;
         });
 
         UserCalendar
-            .findOne({UserId: idCookie, Year: year, Month: month, Day: day})
-            .select("-Year -Month -Day -UserId")
+            .findOne({UserId: idCookie, Date: {$regex: regex} })
             .exec(function(err, day){
+                console.log(day);
                 if (err) throw err;
                 res.json(day);
             });
@@ -166,8 +154,6 @@ app.post('/deleteMealFromDiary', function(req, res){
 
 app.get('/getBlocks', function(req, res){
     var idCookie = getUserCookie("id", req);
-    var year = req.query.year;
-    var month = req.query.month;
     var processedData = [];
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
@@ -241,9 +227,6 @@ app.post('/saveUserInfo', function(req, res){
     var FatBodyMassPercentage = req.body.FatBodyMassPercentage;
     var idCookie = getUserCookie("id", req);
     var date = new Date();
-    var day = manageDates.getDay(date);
-    var month = manageDates.getMonth(date);
-    var year = date.getFullYear();
 
     User.findOneAndUpdate({_id: ObjectId(idCookie)}, {
         $set: {
@@ -253,7 +236,7 @@ app.post('/saveUserInfo', function(req, res){
 
     var newUserProgress = new UserProgress({
         UserId: idCookie,
-        Date: day + "." + month + "." + year,
+        Date: date,
         Weight: Weight,
         FatBodyMassPercentage: FatBodyMassPercentage
     });

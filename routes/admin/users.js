@@ -50,7 +50,15 @@ app.get('/admin/loadAllUsers', function (req, res) {
                             usersInfo[Progress[i].UserId].Records += 1;
                         }
                         else console.log("Unneeded record for user", Progress[i].UserId + "in collection Progress");
+
+                        // var spl = Progress[i].Date.split(".");
+                        //   var rev = spl[2] + "." + spl[1] + "." + spl[0];
+                        //   var newD = new Date(rev);
+                        //
+                        //   Progress[i].Date = newD;
+                        //   Progress[i].save();
                     }
+
                 }
 
                 UserCalendar.find({}, function(err3, Calendar){
@@ -62,6 +70,17 @@ app.get('/admin/loadAllUsers', function (req, res) {
                                 usersInfo[Calendar[i].UserId].Records += 1;
                             }
                             else console.log("Unneeded record for user", Calendar[i].UserId+ "in collection Calendar");
+                            // var date = Calendar[i].Year + ".0" + Calendar[i].Month + ".";
+                            // if(Calendar[i].Day < 10) date += "0";
+                            // date += Calendar[i].Day;
+                            // var newD = new Date(date);
+                            // console.log(date, newD);
+                            // //
+                            // Calendar[i].Day = undefined;
+                            // Calendar[i].Month = undefined;
+                            // Calendar[i].Year = undefined;
+                            // Calendar[i].Date = newD;
+                            // Calendar[i].save();
                         }
                     }
 

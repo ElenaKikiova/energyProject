@@ -46,12 +46,9 @@ app.post('/addMealToDiary', function(req, res){
     var idCookie = getUserCookie("id", req);
 
     var date = new Date();
-    var Year = date.getFullYear();
-    var Month = manageDates.getMonth(date);
-    var Day = manageDates.getDay(date);
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserCalendar.findOne({ UserId: idCookie, Year: Year, Month: Month, Day: Day}, function(err, todayRecord){
+        UserCalendar.findOne({ UserId: idCookie, Date: date}, function(err, todayRecord){
             if(err) throw err;
 
             console.log(todayRecord);
@@ -61,9 +58,7 @@ app.post('/addMealToDiary', function(req, res){
                 console.log("New");
                 var todayRecord = new UserCalendar({
                     UserId: idCookie,
-                    Year: Year,
-                    Month: Month,
-                    Day: Day,
+                    Date: date,
                     Blocks: Blocks,
                     Details: [
                         {
