@@ -28,7 +28,7 @@ function loadUserProgressChart(reload){
         for(var i = 0; i < Progress.length; i++){
             ProgressForChart.bodyFatPercentage.push(Progress[i].FatBodyMassPercentage)
             ProgressForChart.weight.push(Progress[i].Weight)
-            ProgressForChart.dates.push(Progress[i].Date)
+            ProgressForChart.dates.push(composeDate(Progress[i].Date))
         }
 
 
