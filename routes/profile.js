@@ -74,7 +74,7 @@ app.get('/getUserProgress', function(req, res){
 
 
 
-            UserCalendar.find({ UserId: idCookie}.sort({ Date: 'desc' }).exec(function(err, Blocks){
+            UserCalendar.find({ UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Blocks){
                 if (err) throw err;
 
                 if(Blocks.length > 30){
