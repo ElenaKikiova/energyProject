@@ -5,6 +5,7 @@ function loadUserTodayMeals(){
     $.get("/getTodayMeals")
     .done(function(data){
         var TodayDetails = $("#TodayDetails");
+        console.log(data);
         TodayDetails.empty();
         if(data == null){
             $(TodayDetails).append("<div class='text-center'>Днес още не сте хапвали.");
@@ -14,7 +15,6 @@ function loadUserTodayMeals(){
             var Meals = data.Details;
 
             $("#TodayBlocksSpan").html(TodayBlocks);
-
             for(var i = 0; i < Meals.length; i++){
                 var ending = "a";
                 if(Meals[i].blocks == 1) ending = "";

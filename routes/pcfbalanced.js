@@ -78,10 +78,11 @@ app.post('/addMealToDiary', function(req, res){
                 });
             }
             else{
-                console.log("update");
                 var NewBlocksValue = todayRecord.Blocks + Blocks;
                 var NewDetails = todayRecord.Details;
                 NewDetails.push({"time": Time, "blocks": Blocks});
+
+                console.log(NewDetails);
 
                 UserCalendar.updateOne(
                     {_id: todayRecord.id},

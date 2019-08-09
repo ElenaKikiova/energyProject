@@ -102,18 +102,20 @@ app.get('/getTodayMeals', function(req, res){
     var idCookie = getUserCookie("id", req);
     var date = new Date();
     var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " " + manageDates.getDay(date) + " " + date.getFullYear() + ").+");
-    console.log(regex);
 
     // Delete all other day's details
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserCalendar.updateMany({Details: { $ne: null }, Date: { $ne: date }}, { $unset: { Details: ""}}, function(err){
+        UserCalendar.findOne({Details: { $ne: null }}, function(err, oldDetails){
             if (err) throw err;
+            if(oldDetails != undefined){
+                oldDetails.Details = undefined;
+                oldDetails.save();
+            }
         });
 
         UserCalendar
             .findOne({UserId: idCookie, Date: {$regex: regex} })
             .exec(function(err, day){
-                console.log(day);
                 if (err) throw err;
                 res.json(day);
             });
