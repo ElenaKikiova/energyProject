@@ -157,7 +157,8 @@ footer {
   height: 100%;
   position: absolute;
 }
-form, #Form{
+form,
+#Form {
   max-width: 500px;
   margin: auto;
 }

@@ -10,27 +10,37 @@ function loadUserProgressChart(reload){
 
         var BlocksForChart = {blocks: [], dates: [], colors: []};
         var ProgressForChart = {bodyFatPercentage: [], weight: [], dates: []}
+        var Current = {};
 
         var k = parseFloat($("#blocksPerDay").html());
+
+        Current.avgDailyBlocks = 0;
 
         for(var i = 0; i < Blocks.length; i++){
             BlocksForChart.blocks.push(Blocks[i].Blocks)
             BlocksForChart.dates.push(Blocks[i].Day + "." + Blocks[i].Month + "." + Blocks[i].Year);
-            if(Blocks[i].Blocks < 11) BlocksForChart.colors[i] = "red";
-            else if(Blocks[i].Blocks > 17) BlocksForChart.colors[i] = "blue";
-            else BlocksForChart.colors[i] = "hsl(" + Blocks[i].Blocks * k +  ", 70%, 50%)";
-            console.log(Blocks[i].Blocks * k, k);
-
+            if(Blocks[i].Blocks < 11) BlocksForChart.colors[i] = "grey";
+            else if(Blocks[i].Blocks > 17) BlocksForChart.colors[i] = "grey";
+            else BlocksForChart.colors[i] = "hsl(" + Blocks[i].Blocks * k +  ", 70%, 70%)";
+            Current.avgDailyBlocks += Blocks[i].Blocks;
         }
 
         for(var i = 0; i < Progress.length; i++){
             ProgressForChart.bodyFatPercentage.push(Progress[i].FatBodyMassPercentage)
             ProgressForChart.weight.push(Progress[i].Weight)
             ProgressForChart.dates.push(Progress[i].Date)
-
         }
 
-        console.log(BlocksForChart, ProgressForChart);
+
+        Current.avgDailyBlocks = Math.round(Current.avgDailyBlocks / Blocks.length);
+        Current.weight = ProgressForChart.weight[ProgressForChart.weight.length - 1];
+        Current.bodyFatPercentage = ProgressForChart.bodyFatPercentage[ProgressForChart.bodyFatPercentage.length - 1];
+
+        console.log(BlocksForChart, ProgressForChart, Current);
+
+        $("#avgDailyBlocks").html(Current.avgDailyBlocks);
+        $(".dataCard#weight>.value>.digit").html(Math.round(Current.weight));
+        $(".dataCard#bodyFatPercentage>.value>.digit").html(Current.bodyFatPercentage);
 
         // Display data in table
 
@@ -46,8 +56,24 @@ function loadUserProgressChart(reload){
                         data: BlocksForChart.blocks
                     }
                 ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 17
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                }
             }
         });
+
+
 
         var progressChart = new Chart(document.getElementById('ProgressChart').getContext('2d'), {
             type: 'line',
@@ -56,17 +82,30 @@ function loadUserProgressChart(reload){
                 datasets: [
                     {
                         label: 'Процент телесни мазнини',
-                        backgroundColor: 'rgb(100, 100, 200)',
-                        borderColor: 'rgb(100, 100, 200)',
+                        backgroundColor: '#40b2aa',
+                        borderColor: '#30a199',
+                        pointBackgroundColor : '#209088',
                         data: ProgressForChart.bodyFatPercentage
                     },
                     {
                         label: 'Тегло',
-                        backgroundColor: 'rgb(160, 130, 200)',
-                        borderColor: 'rgb(160, 130, 200)',
+                        backgroundColor: '#bed554',
+                        borderColor: '#adc443',
+                        pointBackgroundColor: '#9cb332',
                         data: ProgressForChart.weight
                     }
                 ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 70
+                        }
+                    }]
+                }
             }
         });
 

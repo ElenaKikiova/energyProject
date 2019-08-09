@@ -22,19 +22,251 @@
 
             <div id="NavigationPane" class="d-flex flex-wrap justify-content-around align-content-around">
 
-                <div id="BlocksArea">
-                    <canvas id="BlocksChart"></canvas>
+                <a href="#CalendarSection" class="NavItemContainer" data-section="Calendar">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-calendar-alt"></div>
+                            <div class="NITitle">Календар</div>
+                            <div class="NIDescription">Календар на приети блокове</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#ProgressSection" class="NavItemContainer" data-section="Progress">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-chart-line"></div>
+                            <div class="NITitle">Прогрес</div>
+                            <div class="NIDescription">Тегло и % телесни мазнини</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#BodyMassSection" class="NavItemContainer" data-section="BodyMass">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-calculator"></div>
+                            <div class="NITitle">Калкулатор</div>
+                            <div class="NIDescription">Изчисли своя % телесни мазнини</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#MyIngredientsSection" class="NavItemContainer" data-section="MyIngredients">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-carrot"></div>
+                            <div class="NITitle">Мои продукти</div>
+                            <div class="NIDescription">Продукти на потребителя</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#MyRecipesSection" class="NavItemContainer" data-section="MyRecipes">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-utensils"></div>
+                            <div class="NITitle">Мои рецепти</div>
+                            <div class="NIDescription">Запазени балансирани рецепти</div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <div class="NavItemContainer" data-section="Settings" style="cursor: pointer">
+                    <div class="NavItem">
+                        <div class="NavInfo">
+                            <div class="NIIcon fas fa-user-cog"></div>
+                            <div class="NITitle">Настройки</div>
+                            <div class="NIDescription">Данни на потребителя</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="ProgressArea">
-                    <canvas id="ProgressChart"></canvas>
                 </div>
 
-                <span class="d-none" id="blocksPerDay"><%=userInfo.BlocksPerDay%></span>
-                <span class="d-none" id="username"><%=userInfo.Username%></span>
-                <span class="d-none" id="email"><%=userInfo.hiddenEmail%> %></span>
+                <div id="SectionContainer" class="container-fluid">
 
-            </div>
+                <div id="CalendarSection" class="PaddingDiv">
+
+                    <section class="d-flex flex-wrap">
+
+                        <div class="flex-grow-1 my-2 mr-sm-2" style="min-width: 300px">
+
+                            <h3>Приети блокове за <%=todayDate%></h3>
+
+                            <div id="TodayBlocks" class="py-2"> Общо: <span id="TodayBlocksSpan">0</span> блока</div>
+
+                            <ul id="TodayDetails">
+
+                            </ul>
+
+                            <div class="d-flex flex-wrap align-content-stretch">
+                                    <a href="/pcfbalanced" class="d-block flex-grow-1 w-50 px-1" style="text-decoration: none; color: white;">
+                                        <button class="w-100">Добави чрез Балансатор</button>
+                                    </a>
+                                    <button class="flex-grow-1 w-50 px-1" id="AddMealManually">Добави ръчно</button>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow-1 my-2 ml-sm-2" style="min-width: 300px">
+                            <h3> Календар на приети блокове </h3>
+
+                            <div class="Notification MobileWarning">Моля завъртете екрана за по-добва видимост на графиката</div>
+
+                            <div id="Legend">
+
+                                <div class="d-flex justify-content-center flex-wrap">
+                                    <div class="d-flex">
+                                        <div class="ml-3 gradeColor blocks-abnormal"></div><div>Под нормата</div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ml-3 gradeColor blocks-good"></div><div>В нормата</div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ml-3 gradeColor blocks-high"></div><div>Над нормата</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <canvas id="BlocksChart"></canvas>
+
+                        </div>
+
+                    </section>
+                </div>
+
+                <div id="ProgressSection" class="PaddingDiv">
+
+                    <section class="d-flex flex-wrap">
+
+                        <div style="min-width: 300px; width: 450px" class="my-2 flex-grow-1 mr-sm-3">
+
+                            <h3>Прогрес</h3>
+
+                            <div class="Notification">Целта на Зоната е постигане на оптимален процент телесни мазнини. Препоръчва се да се следи за промени в този процент всяка седмица
+                            <a href="/article/5c57eeb43249af461087e811#2" class="Link">Какъв процент телесни мазнини трябва да имам?</a>
+                            </div>
+
+                            <div class="Notification MobileWarning">Моля завъртете екрана за по-добва видимост на графиката</div>
+
+                            <canvas id="ProgressChart"></canvas>
+
+                        </div>
+
+                        <div  style="min-width: 250px; width: 450px" class="my-2 flex-grow-1 ml-sm-3">
+
+                            <h3>Изчисли % телесни мазнини</h3>
+
+                            <% include partials/calcBodyMass %>
+
+                            <button id="SaveResults" class="w-100 mt-2" style="display: none">Съхрани резултати</button>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <div id="MyIngredientsSection" class="PaddingDiv">
+
+                    <section class="d-flex flex-wrap">
+
+                        <div style="min-width: 350px" class="my-2 flex-grow-1 mr-sm-3">
+                            <h3>Моите продукти</h3>
+
+                            <div>
+                                <button type="button" class="PlusButton mx-auto fas fa-plus-circle" data-show-type="userIngredientForm"></button>
+
+                                <div id="addIngredientForm" class="SlideDown mb-2" data-show-type="userIngredientForm">
+                                    <label> Име на продукта:
+                                        <input type="text" data-field="name">
+                                    </label>
+                                    <div>
+                                        <div class="Notification">Въведете хранителните стойности на продукта <b>за 100г.</b> Типът на продукта (протеин, въглехидрат или мазнина) ще бъде определен автоматично</div>
+                                        <div class="Notification">За да получите по-точни данни за продукта, въведете грамажа на въглехидратите, от който е изваден грамажа на фибрите</div>
+
+                                        <div>Протеини: <input type="number" min="0" max="100" data-field="contains" data-type="P"> г <br></div>
+                                        <div>Общи въглехидрати - фибри: <input type="number" data-field="contains" data-type="C"> г <br></div>
+                                        <div>Мазнини: <input type="number" data-field="contains" data-type="F"> г <br></div>
+                                    </div>
+                                    <button class="SubmitIngredient w-100">Добави</button>
+                                </div>
+                            </div>
+
+                            <div id="myIngredients" class="d-flex flex-wrap"></div>
+
+                        </div>
+
+                        <div style="min-width: 350px" class="my-2 flex-grow-1 ml-sm-3">
+                            <h3>Моите полуфабрикати</h3>
+
+                            <div>
+                                <button type="button" class="PlusButton mx-auto fas fa-plus-circle" data-show-type="userDishForm"></button>
+
+                                <div id="addDishForm" class="SlideDown mb-2" data-show-type="userDishForm">
+                                    <label> Име на готовото блюдо:
+                                        <input type="text" data-field="name">
+                                    </label>
+                                    <div>
+                                        <div class="Notification">Въведете хранителните стойности на полуфабриката <b>за 100г.</b> След запазване на полуфабриката, ще може да го включвате в балансирани ястия в модул Балансатор</div>
+
+                                        <div>Протеини: <input type="number" min="0" max="100" data-field="contains" data-type="P"> г <br></div>
+                                        <div>Въглехидрати: <input type="number" data-field="contains" data-type="C"> г <br></div>
+                                        <div>Мазнини: <input type="number" data-field="contains" data-type="F"> г <br></div>
+                                    </div>
+                                    <button class="SubmitDish w-100">Добави</button>
+                                </div>
+                            </div>
+
+                            <div id="myDishes" class="d-flex flex-wrap"></div>
+
+                        </div>
+
+                    </section>
+                </div>
+
+
+
+                <div id="MyRecipesSection" class="PaddingDiv">
+                    <section>
+                        <h3>Моите рецепти</h3>
+
+                        <ul>
+                        <% if(Recipes.length > 0){%>
+                            <% for(var i = 0; i < Recipes.length; i++){%>
+
+                                <li class="Recipe d-flex justify-content-between" data-recipe-id="<%=Recipes[i]._id%>">
+                                    <a href="recipe/<%=Recipes[i]._id%>" title="Отвори рецепта">
+                                    <div class="d-flex align-items-start">
+
+                                        <div class="LIDetails d-none d-md-block" data-type="Date"><%=Recipes[i].Date%></div>
+
+                                        <div class="LIDetails px-1" data-type="RecipeName">
+                                            <%=Recipes[i].Name%>
+                                        </div>
+
+                                        <div class="LIDetails px-1" data-type="Blocks">(<%=Recipes[i].Blocks%> блок<%if(Recipes[i].Blocks != 1){%>a<%}%>)</div>
+
+                                    </div></a>
+                                </li>
+                            <%}%>
+                        <%}else{%>
+                            <div class="text-center">
+                                Нямате още въведени рецепти. <a href="/pcfbalanced" class="Link">Балансирайте ястие с Балансатор</a> и до запазете като рецепта.
+                            </div>
+                        <%}%>
+                        <ul>
+
+                        <a href="/pcfbalanced" style="text-decoration: none; color: white;"><button class="w-100 flex-grow-1">Създай балансирана рецепта</button></a>
+                    </section>
+
+                    <span class="d-none" id="blocksPerDay"><%=userInfo.BlocksPerDay%></span>
+                    <span class="d-none" id="Gender"><%=userInfo.Gender%></span>
+                    <span class="d-none" id="username"><%=userInfo.Username%></span>
+                    <span class="d-none" id="email"><%=userInfo.hiddenEmail%> %></span>
+
+                </div>
 
             <div class="Notification text-center" style="margin-bottom: 60px; padding-bottom: 30px; margin-top: 60px; padding-top: 30px; margin-left: 15px; margin-right: 15px">
 

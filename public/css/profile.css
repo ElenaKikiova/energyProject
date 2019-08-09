@@ -163,17 +163,14 @@ td.event div.day {
   border: 1px solid #cacaca;
   border-radius: 3px;
 }
-.blocks-0 {
-  background-color: hsl(0, 90%, 65%);
+.blocks-good {
+  background-color: hsla(100, 90%, 70%);
 }
-.blocks-8 {
-  background-color: hsl(88, 90%, 65%);
+.blocks-high {
+  background-color: hsla(170, 90%, 70%);
 }
-.blocks-13 {
-  background-color: hsl(145, 90%, 65%);
-}
-.blocks-13plus {
-  background-color: #cacaca;
+.blocks-abnormal {
+  background-color: grey;
 }
 td[title="Прием: ~ 13 блока"] > div {
   background-color: hsl(143, 90%, 65%) !important;

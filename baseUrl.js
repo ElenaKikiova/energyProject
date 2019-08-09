@@ -1,8 +1,8 @@
 // Url of the database
 
 // Depends on const online
-const online = false;
-// const online = true;
+// const online = false;
+const online = true;
 
 var baseUrl = "mongodb://localhost:27017/energy";
 if(online == true){
