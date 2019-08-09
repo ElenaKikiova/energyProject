@@ -8,6 +8,7 @@ var UserCalendarSchema = mongoose.Schema({
     Year: Number,
     Month: Number,
     Day: Number,
+    Date: String,
     Blocks: Number,
     Details: Array
 },

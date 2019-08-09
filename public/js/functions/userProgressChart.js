@@ -18,7 +18,7 @@ function loadUserProgressChart(reload){
 
         for(var i = 0; i < Blocks.length; i++){
             BlocksForChart.blocks.push(Blocks[i].Blocks)
-            BlocksForChart.dates.push(Blocks[i].Day + "." + Blocks[i].Month + "." + Blocks[i].Year);
+            BlocksForChart.dates.push(composeDate(Blocks[i].Date));
             if(Blocks[i].Blocks < 11) BlocksForChart.colors[i] = "grey";
             else if(Blocks[i].Blocks > 17) BlocksForChart.colors[i] = "grey";
             else BlocksForChart.colors[i] = "hsl(" + Blocks[i].Blocks * k +  ", 70%, 70%)";

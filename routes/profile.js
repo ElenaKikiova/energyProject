@@ -72,19 +72,34 @@ app.get('/getUserProgress', function(req, res){
         UserProgress.find({UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Progress){
             if(err) throw err;
 
-            // for(var i = 0; i < Progress.length; i++){
-            //     var spl = Progress[i].Date.split(".");
-            //     var rev = spl[2] + "." + spl[1] + "." + spl[0];
-            //     var newD = new Date(rev);
-            //
-            //     Progress[i].Date = newD;
-            //     Progress[i].save();
-            // }
+
 
             UserCalendar.find({ UserId: idCookie}, function(err, Blocks){
                 if (err) throw err;
 
+                if(Blocks.length > 30){
+                    var Bl = Blocks;
+                    for(var i = 0; i < Blocks.length - 30; i++){
+                        Blocks[i].remove();
+                    }
+                }
+
+                for(var i = 0; i < Blocks.length; i++){
+                    var date = Blocks[i].Year + ".0" + Blocks[i].Month + ".";
+                    if(Blocks[i].Day < 10) date += "0";
+                    date += Blocks[i].Day;
+                    var newD = new Date(date);
+                    console.log(date, newD);
+                    //
+                    Blocks[i].Day = undefined;
+                    Blocks[i].Month = undefined;
+                    Blocks[i].Year = undefined;
+                    Blocks[i].Date = newD;
+                    Blocks[i].save();
+                }
+
                 res.json({Progress: Progress, Blocks: Blocks});
+
             })
         })
     });
