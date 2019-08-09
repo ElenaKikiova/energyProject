@@ -72,14 +72,14 @@ app.get('/getUserProgress', function(req, res){
         UserProgress.find({UserId: idCookie}).sort({ Date: 'desc' }).exec(function(err, Progress){
             if(err) throw err;
 
-            for(var i = 0; i < Progress.length; i++){
-                var spl = Progress[i].Date.split(".");
-                var rev = spl[2] + "." + spl[1] + "." + spl[0];
-                var newD = new Date(rev);
-
-                Progress[i].Date = newD;
-                Progress[i].save();
-            }
+            // for(var i = 0; i < Progress.length; i++){
+            //     var spl = Progress[i].Date.split(".");
+            //     var rev = spl[2] + "." + spl[1] + "." + spl[0];
+            //     var newD = new Date(rev);
+            //
+            //     Progress[i].Date = newD;
+            //     Progress[i].save();
+            // }
 
             UserCalendar.find({ UserId: idCookie}, function(err, Blocks){
                 if (err) throw err;
