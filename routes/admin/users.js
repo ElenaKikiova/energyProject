@@ -51,12 +51,12 @@ app.get('/admin/loadAllUsers', function (req, res) {
                         }
                         else console.log("Unneeded record for user", Progress[i].UserId + "in collection Progress");
 
-                        // var spl = Progress[i].Date.split(".");
-                        //   var rev = spl[2] + "." + spl[1] + "." + spl[0];
-                        //   var newD = new Date(rev);
-                        //
-                        //   Progress[i].Date = newD;
-                        //   Progress[i].save();
+                        var spl = Progress[i].Date.split(".");
+                          var rev = spl[2] + "." + spl[1] + "." + spl[0];
+                          var newD = new Date(rev);
+
+                          Progress[i].Date = newD;
+                          Progress[i].save();
                     }
 
                 }
@@ -70,17 +70,17 @@ app.get('/admin/loadAllUsers', function (req, res) {
                                 usersInfo[Calendar[i].UserId].Records += 1;
                             }
                             else console.log("Unneeded record for user", Calendar[i].UserId+ "in collection Calendar");
-                            // var date = Calendar[i].Year + ".0" + Calendar[i].Month + ".";
-                            // if(Calendar[i].Day < 10) date += "0";
-                            // date += Calendar[i].Day;
-                            // var newD = new Date(date);
-                            // console.log(date, newD);
-                            // //
-                            // Calendar[i].Day = undefined;
-                            // Calendar[i].Month = undefined;
-                            // Calendar[i].Year = undefined;
-                            // Calendar[i].Date = newD;
-                            // Calendar[i].save();
+                            var date = Calendar[i].Year + ".0" + Calendar[i].Month + ".";
+                            if(Calendar[i].Day < 10) date += "0";
+                            date += Calendar[i].Day;
+                            var newD = new Date(date);
+                            console.log(date, newD);
+                            //
+                            Calendar[i].Day = undefined;
+                            Calendar[i].Month = undefined;
+                            Calendar[i].Year = undefined;
+                            Calendar[i].Date = newD;
+                            Calendar[i].save();
                         }
                     }
 
@@ -103,21 +103,4 @@ app.get('/admin/loadAllUsers', function (req, res) {
         });
     });
 
-    // res.json("aa")
 });
-
-//
-// app.get('/admin/loadAllUsers', function (req, res) {
-//
-//     console.log("get");
-//
-//     // mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-//     //
-//     //     if(err) throw err;
-//     //     var usersInfo = [];
-//     //
-//     //
-//     // });
-//
-//     res.json("a")
-// });
