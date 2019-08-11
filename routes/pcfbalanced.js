@@ -56,11 +56,8 @@ app.post('/addMealToDiary', function(req, res){
         UserCalendar.findOne({ UserId: idCookie, Date: {$regex: regex}}, function(err, todayRecord){
             if(err) throw err;
 
-            console.log(todayRecord);
-
             // If first meal today
             if(todayRecord == null){
-                console.log("New");
                 var todayRecord = new UserCalendar({
                     UserId: idCookie,
                     Date: date,
@@ -81,8 +78,6 @@ app.post('/addMealToDiary', function(req, res){
                 var NewBlocksValue = todayRecord.Blocks + Blocks;
                 var NewDetails = todayRecord.Details;
                 NewDetails.push({"time": Time, "blocks": Blocks});
-
-                console.log(NewDetails);
 
                 UserCalendar.updateOne(
                     {_id: todayRecord.id},

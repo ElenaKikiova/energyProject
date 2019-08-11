@@ -162,7 +162,7 @@ $("#SaveResults").click(function(){
             type: "success",
             title: "Резултатите са добавени"
         })
-        loadUserProgressTable(true);
+        loadUserProgress();
     })
     .fail(function(){
         swal({

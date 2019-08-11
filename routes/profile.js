@@ -64,8 +64,6 @@ app.get('/profile', function(req, res){
     else{
         res.redirect('login?error=ExpiredSession');
     }
-
-
 });
 
 
@@ -98,40 +96,42 @@ app.get('/getUserProgress', function(req, res){
     });
 })
 
-app.get('/getTodayMeals', function(req, res){
+app.get('/getMeals', function(req, res){
     var idCookie = getUserCookie("id", req);
     var date = new Date();
     var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " " + manageDates.getDay(date) + " " + date.getFullYear() + ").+");
 
     // Delete all other day's details
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
-        UserCalendar.findOne({Details: { $ne: null }}, function(err, oldDetails){
+
+        UserCalendar.findOne({UserId: idCookie, Details: { $ne: null }}, function(err, oldDetails){
             if (err) throw err;
             if(oldDetails != undefined){
-                oldDetails.Details = undefined;
-                oldDetails.save();
+                if(regex.test(oldDetails.Date) == false){
+                    oldDetails.Details = undefined;
+                    oldDetails.save();
+                }
             }
         });
 
         UserCalendar
-            .findOne({UserId: idCookie, Date: {$regex: regex} })
-            .exec(function(err, day){
+            .find({UserId: idCookie})
+            .exec(function(err, meals){
                 if (err) throw err;
-                res.json(day);
+                res.json(meals);
             });
+
+
     });
 })
 
 app.post('/deleteMealFromDiary', function(req, res){
     var dayId = req.body.DayId;
     var mealIndex = parseInt(req.body.MealIndex);
-    console.log(dayId, mealIndex);
 
     mongoose.connect(baseUrl, { useNewUrlParser: true }, function(err, db) {
         UserCalendar.findById({_id: dayId}, function(err, day){
             if (err) throw err;
-
-            console.log(day);
 
             // If this is the last meal
             if(day.Details.length == 1){
@@ -141,7 +141,6 @@ app.post('/deleteMealFromDiary', function(req, res){
             else {
                 var newDetails = day.Details;
                 var deletedMeal = newDetails.splice(mealIndex, 1);
-                console.log(deletedMeal);
                 if(deletedMeal != null){
                     var newBlocks = (day.Blocks - deletedMeal[0].blocks).toFixed(1);
                 }
@@ -151,8 +150,6 @@ app.post('/deleteMealFromDiary', function(req, res){
                 if(err) throw err;
                 res.sendStatus(200);
             });
-
-            console.log(newDetails, newBlocks);
         });
     });
 
@@ -323,7 +320,6 @@ app.get('/getUserDishes', function(req, res){
 
 app.post('/saveUserDish', function(req, res){
     var Dish = req.body.Dish;
-    console.log(Dish);
     var idCookie = getUserCookie("id", req);
 
     var newDish = new UserDish({
@@ -332,7 +328,6 @@ app.post('/saveUserDish', function(req, res){
         Blocks: Dish.Blocks
     });
 
-    console.log(newDish);
 
     newDish.save(function(err){
         if(err) throw err;

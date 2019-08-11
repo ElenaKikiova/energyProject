@@ -1,14 +1,10 @@
 
 // On page loading
 
-// CalendarSection
-
-loadUserTodayMeals();
-loadUserBlocksCalendar(false);
-//ProgressSection
-loadUserProgressChart(false);
-
-loadUserTodayMeals();
+// Meal
+loadUserMeals();
+//Progress and tofay meals Section
+loadUserProgress();
 // MyIngredientsSection
 loadUserIngredients();
 // MyDishesSection
