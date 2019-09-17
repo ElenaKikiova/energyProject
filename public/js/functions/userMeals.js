@@ -27,9 +27,10 @@ function loadUserMeals(){
             var date = new Date();
             var regex = new RegExp(".+(" + monthNames[date.getMonth()] + " " + getDay(date) + " " + date.getFullYear() + ").+");
 
+
             for(var i = 0; i < data.length; i++){
                 BlocksForChart.blocks.push(data[i].Blocks)
-                BlocksForChart.dates.push(composeDate(data[i].Date));
+                BlocksForChart.dates.push(data[i].Date);
                 if(data[i].Blocks < 11) BlocksForChart.colors[i] = "grey";
                 else if(data[i].Blocks > 17) BlocksForChart.colors[i] = "grey";
                 else BlocksForChart.colors[i] = "hsl(" + data[i].Blocks * k +  ", 70%, 70%)";
@@ -57,6 +58,17 @@ function loadUserMeals(){
                 }
             }
 
+
+
+
+            BlocksForChart.dates.sort(function(a, b){
+                return new Date(a) - new Date(b);
+            })
+
+            for(var i = 0; i < BlocksForChart.dates.length; i++){
+                BlocksForChart.dates[i] = composeDate(BlocksForChart.dates[i]);
+            }
+
             // Chart
 
             var blocksChart = new Chart(document.getElementById('BlocksChart').getContext('2d'), {
@@ -78,7 +90,7 @@ function loadUserMeals(){
                             display: true,
                             ticks: {
                                 suggestedMin: 0,
-                                suggestedMax: 17
+                                suggestedMax: 15
                             }
                         }]
                     },
