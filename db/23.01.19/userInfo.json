@@ -1,6 +1,0 @@
-{ 
-    "_id" : ObjectId("5c322dc83249af11b8d1e8d6"), 
-    "Height" : 166.0, 
-    "Weight" : 70.0, 
-    "UserId" : ObjectId("5c23c2b03532c638204a4817")
-}

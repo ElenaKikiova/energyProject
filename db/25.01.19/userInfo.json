@@ -1,9 +1,0 @@
-{ 
-    "_id" : ObjectId("5c4aedb265c7b12bf0afeb49"), 
-    "Constants" : [
-
-    ], 
-    "UserId" : ObjectId("5c4aedb265c7b12bf0afeb48"), 
-    "Gender" : "F", 
-    "__v" : NumberInt(0)
-}
